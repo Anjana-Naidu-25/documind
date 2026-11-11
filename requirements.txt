@@ -1,0 +1,12 @@
+sentence-transformers
+qdrant-client
+rank-bm25
+pymupdf
+fastapi
+uvicorn[standard]
+streamlit
+requests
+python-dotenv
+pydantic
+pytest
+ruff
