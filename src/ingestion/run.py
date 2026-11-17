@@ -1,13 +1,16 @@
 """Ingestion pipeline: load -> clean -> chunk -> embed -> store.
 
-Run from the project root:   python -m src.ingestion.run
+Run from the project root:   python -m src.ingestion.run            (incremental)
+                              python -m src.ingestion.run --rebuild   (start from scratch)
 """
+import hashlib
 import json
+import sys
 import time
 import uuid
 
 from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, PointStruct, VectorParams
+from qdrant_client.models import Distance, PointIdsList, PointStruct, VectorParams
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer
 
@@ -38,6 +41,7 @@ def build_chunks() -> list[dict]:
                 "path": doc.rel_path,
                 "chunk_idx": c.chunk_idx,
                 "tokens": count(c.text),
+                "hash": hashlib.sha1(c.text.encode("utf-8")).hexdigest(),
             })
     print(f"Pages: {len(docs)}  Chunks: {len(records)}")
     return records
@@ -57,28 +61,56 @@ def print_stats(records: list[dict]) -> None:
           f"p95={t[int(len(t)*0.95)]}  max={t[-1]}  (model limit 512)")
 
 
-def store(records: list[dict]) -> None:
-    model = SentenceTransformer(EMBED_MODEL)
-    client = QdrantClient(url=QDRANT_URL)
-    if client.collection_exists(COLLECTION):
-        client.delete_collection(COLLECTION)
-    client.create_collection(COLLECTION, vectors_config=VectorParams(size=EMBED_DIM, distance=Distance.COSINE))
+def _existing_hashes(client: QdrantClient) -> dict[str, str | None]:
+    """id -> content hash for every point already in the collection."""
+    found, offset = {}, None
+    while True:
+        points, offset = client.scroll(COLLECTION, limit=1000, offset=offset,
+                                       with_payload=["hash", "text"], with_vectors=False)
+        for p in points:
+            payload = p.payload or {}
+            # Points from the first run have no stored hash: derive it from their stored text.
+            h = payload.get("hash") or (
+                hashlib.sha1(payload["text"].encode("utf-8")).hexdigest() if payload.get("text") else None)
+            found[str(p.id)] = h
+        if offset is None:
+            return found
 
+
+def store(records: list[dict], rebuild: bool = False) -> None:
+    """Embed only new or changed chunks; delete chunks that no longer exist."""
+    client = QdrantClient(url=QDRANT_URL)
+    if rebuild and client.collection_exists(COLLECTION):
+        client.delete_collection(COLLECTION)
+    if not client.collection_exists(COLLECTION):
+        client.create_collection(COLLECTION, vectors_config=VectorParams(size=EMBED_DIM, distance=Distance.COSINE))
+
+    existing = _existing_hashes(client)
+    todo = [r for r in records if existing.get(r["id"]) != r["hash"]]
+    stale = list(set(existing) - {r["id"] for r in records})
+    print(f"Unchanged: {len(records) - len(todo)}  To embed: {len(todo)}  To delete: {len(stale)}")
+    if stale:
+        client.delete(COLLECTION, points_selector=PointIdsList(points=stale))
+    if not todo:
+        print("Nothing to embed.")
+        return
+
+    model = SentenceTransformer(EMBED_MODEL)
     start, batch = time.time(), 64
-    for i in range(0, len(records), batch):
-        part = records[i:i + batch]
+    for i in range(0, len(todo), batch):
+        part = todo[i:i + batch]
         vecs = model.encode([r["text"] for r in part], normalize_embeddings=True, batch_size=32)
         client.upsert(COLLECTION, points=[
             PointStruct(id=r["id"], vector=v.tolist(),
-                        payload={k: r[k] for k in ("text", "title", "section", "url", "path", "chunk_idx")})
+                        payload={k: r[k] for k in ("text", "title", "section", "url", "path", "chunk_idx", "hash")})
             for r, v in zip(part, vecs)
         ])
-        print(f"  embedded {min(i + batch, len(records))}/{len(records)}  ({time.time() - start:.0f}s)", flush=True)
-    print(f"Stored {client.count(COLLECTION).count} vectors in '{COLLECTION}'")
+        print(f"  embedded {min(i + batch, len(todo))}/{len(todo)}  ({time.time() - start:.0f}s)", flush=True)
+    print(f"Collection '{COLLECTION}' now holds {client.count(COLLECTION).count} vectors")
 
 
 if __name__ == "__main__":
     recs = build_chunks()
     save_jsonl(recs)
     print_stats(recs)
-    store(recs)
+    store(recs, rebuild="--rebuild" in sys.argv)

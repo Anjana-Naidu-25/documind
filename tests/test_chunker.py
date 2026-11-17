@@ -40,3 +40,9 @@ def test_oversized_block_is_split():
 def test_tiny_sections_skipped():
     chunks = chunk_page("T", "## Empty\n\nok", count, 100, 10, min_body_tokens=5)
     assert chunks == []
+
+
+def test_whats_next_section_skipped():
+    body = "## Usage\n\nSome real explanatory content that is long enough to keep around here.\n\n## What's next\n\n- Read the other guide about something very interesting and long enough to count."
+    chunks = chunk_page("T", body, count, 100, 10, min_body_tokens=5)
+    assert [c.section for c in chunks] == ["T > Usage"]

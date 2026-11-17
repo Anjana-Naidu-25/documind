@@ -49,7 +49,8 @@ def _glossary_tooltip(m: re.Match) -> str:
 
 
 def _glossary_definition(m: re.Match) -> str:
-    return (_attr(m.group(1), "term_id") or "").replace("-", " ")
+    # The definition text is injected by Hugo at build time; the term id alone is noise.
+    return ""
 
 
 def _feature_state(m: re.Match) -> str:
@@ -112,6 +113,9 @@ def clean_markdown(text: str) -> tuple[dict, str]:
 
     # Anything else (include, param, version-check, thirdparty-content, table, api-reference, ...)
     body = re.sub(_OPEN + r"/?\s*[a-zA-Z_-]+[^>%]*?" + _CLOSE, "", body, flags=re.DOTALL)
+
+    # Heading anchors like "## Container restarts {#restart-policy}" are noise in breadcrumbs.
+    body = re.sub(r"^(#{1,6}\s+.*?)\s*\{#[^}]+\}\s*$", r"\1", body, flags=re.MULTILINE)
 
     # Tidy whitespace.
     body = "\n".join(line.rstrip() for line in body.splitlines())

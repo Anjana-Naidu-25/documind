@@ -51,3 +51,13 @@ def test_go_template_in_code_untouched():
 def test_url_building():
     assert path_to_url("concepts/workloads/pods/_index.md") == "https://kubernetes.io/docs/concepts/workloads/pods/"
     assert path_to_url("concepts/configuration/secret.md") == "https://kubernetes.io/docs/concepts/configuration/secret/"
+
+
+def test_heading_anchor_stripped():
+    _, body = clean_markdown("## Container restarts {#restart-policy}\n\ntext")
+    assert body.startswith("## Container restarts") and "{#" not in body
+
+
+def test_glossary_definition_dropped():
+    _, body = clean_markdown('Title\n\n{{< glossary_definition term_id="configmap" length="short" >}}\n\nMore')
+    assert "configmap" not in body.lower()

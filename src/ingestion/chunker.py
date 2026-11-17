@@ -13,6 +13,9 @@ import re
 from dataclasses import dataclass
 from typing import Callable
 
+# Sections that are just link lists make poor answer material.
+SKIP_SECTIONS = {"what's next", "whats next"}
+
 HEADING = re.compile(r"^(#{1,6})\s+(.*?)\s*#*\s*$")
 FENCE = re.compile(r"^\s*(```|~~~)")
 
@@ -105,6 +108,8 @@ def chunk_page(
 ) -> list[Chunk]:
     chunks: list[Chunk] = []
     for path, section_text in _split_sections(body, title):
+        if path and path[-1].replace("\u2019", "'").strip().lower() in SKIP_SECTIONS:
+            continue
         breadcrumb = " > ".join([title] + path) if title else " > ".join(path)
         prefix_cost = count_tokens(breadcrumb) + 2
         limit = max(max_tokens - prefix_cost, 50)
