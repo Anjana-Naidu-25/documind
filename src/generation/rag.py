@@ -5,6 +5,7 @@
 """
 import re
 import sys
+import time
 from typing import Callable
 
 from src.config import TOP_K
@@ -49,7 +50,9 @@ def answer(
     if llm is None:
         from src.generation.llm import chat as llm
 
+    t0 = time.time()
     chunks = retriever(question, k)
+    retrieval_seconds = round(time.time() - t0, 2)
     out = llm(build_messages(question, chunks))
     text = normalize_citations(out["text"])
 
@@ -57,7 +60,8 @@ def answer(
     cited = [] if not_found else extract_citations(text, len(chunks))
     sources = [{"n": n, "section": chunks[n - 1]["section"], "url": chunks[n - 1]["url"]} for n in cited]
     return {"question": question, "answer": text, "found": not not_found,
-            "sources": sources, "retrieved": chunks, "llm": out}
+            "sources": sources, "retrieved": chunks, "llm": out,
+            "retrieval_seconds": retrieval_seconds}
 
 
 if __name__ == "__main__":
