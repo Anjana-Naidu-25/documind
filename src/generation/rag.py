@@ -11,9 +11,26 @@ from src.config import TOP_K
 from src.generation.prompt import NOT_FOUND, build_messages
 
 
+# Models sometimes write citations as 【1】 or [1, 2] instead of [1].
+_CITE = re.compile(r"[\[\u3010]\s*(\d+(?:\s*[,;]\s*\d+)*)\s*[\]\u3011]")
+_CODE_FENCE = re.compile(r"```.*?```", re.DOTALL)
+
+
+def normalize_citations(text: str) -> str:
+    """Show every citation in one style: 【1】 -> [1]."""
+    return re.sub(r"\u3010\s*(\d+)\s*\u3011", r"[\1]", text)
+
+
 def extract_citations(text: str, n_passages: int) -> list[int]:
-    """Passage numbers the answer actually cites, ignoring numbers that don't exist."""
-    return sorted({int(x) for x in re.findall(r"\[(\d+)\]", text) if 1 <= int(x) <= n_passages})
+    """Passage numbers the answer actually cites, ignoring numbers that don't exist.
+    Code blocks are skipped so `items[1]` in a command is not mistaken for a citation."""
+    found: set[int] = set()
+    for m in _CITE.finditer(_CODE_FENCE.sub("", text)):
+        for part in re.split(r"[,;]", m.group(1)):
+            n = int(part)
+            if 1 <= n <= n_passages:
+                found.add(n)
+    return sorted(found)
 
 
 def is_not_found(text: str) -> bool:
@@ -34,7 +51,7 @@ def answer(
 
     chunks = retriever(question, k)
     out = llm(build_messages(question, chunks))
-    text = out["text"]
+    text = normalize_citations(out["text"])
 
     not_found = is_not_found(text)
     cited = [] if not_found else extract_citations(text, len(chunks))

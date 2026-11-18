@@ -3,7 +3,7 @@ import requests
 
 from src.generation import llm as llm_mod
 from src.generation.prompt import NOT_FOUND, build_messages
-from src.generation.rag import answer, extract_citations, is_not_found
+from src.generation.rag import answer, extract_citations, is_not_found, normalize_citations
 
 CHUNKS = [
     {"text": "Pods > Lifecycle\n\nA pod restarts containers per restartPolicy.", "section": "Pods > Lifecycle", "url": "https://k/pods/"},
@@ -84,3 +84,22 @@ def test_chat_requires_key(monkeypatch):
     monkeypatch.setattr(llm_mod, "LLM_API_KEY", "")
     with pytest.raises(llm_mod.LLMError, match="API key"):
         llm_mod.chat([{"role": "user", "content": "hi"}])
+
+
+def test_fullwidth_and_list_citations_are_recognised():
+    assert extract_citations("Grace period applies\u30101\u3011 and hooks\u30103\u3011.", 5) == [1, 3]
+    assert extract_citations("Both agree [1, 2].", 5) == [1, 2]
+
+
+def test_citations_inside_code_blocks_are_ignored():
+    text = "Run this:\n```shell\nkubectl get pods -o jsonpath='{.items[1]}'\n```\nDone [2]."
+    assert extract_citations(text, 5) == [2]
+
+
+def test_normalize_citations():
+    assert normalize_citations("a\u30101\u3011 b\u3010 2 \u3011") == "a[1] b[2]"
+
+
+def test_answer_with_fullwidth_citations_gets_sources():
+    res = answer("q", retriever=lambda q, k: CHUNKS, llm=_fake_llm("Restarts per policy\u30101\u3011."))
+    assert res["answer"] == "Restarts per policy[1]." and [s["n"] for s in res["sources"]] == [1]
