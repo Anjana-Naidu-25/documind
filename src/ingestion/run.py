@@ -23,6 +23,7 @@ from src.ingestion.loader import load_docs
 
 def build_chunks() -> list[dict]:
     tok = AutoTokenizer.from_pretrained(EMBED_MODEL)
+    tok.model_max_length = int(1e9)   # we only count tokens here; silences the harmless "1780 > 512" warning
     count = lambda s: len(tok.encode(s, add_special_tokens=False))
 
     records = []

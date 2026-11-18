@@ -108,7 +108,8 @@ def chunk_page(
 ) -> list[Chunk]:
     chunks: list[Chunk] = []
     for path, section_text in _split_sections(body, title):
-        if path and path[-1].replace("\u2019", "'").strip().lower() in SKIP_SECTIONS:
+        # Skip "What's next" and everything nested under it (e.g. "What's next > Reference").
+        if any(seg.replace("\u2019", "'").strip().lower() in SKIP_SECTIONS for seg in path):
             continue
         breadcrumb = " > ".join([title] + path) if title else " > ".join(path)
         prefix_cost = count_tokens(breadcrumb) + 2

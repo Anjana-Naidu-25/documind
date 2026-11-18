@@ -23,3 +23,11 @@ COLLECTION = "k8s_docs"
 # bge-small truncates input at 512 tokens, so chunks must stay below that.
 CHUNK_MAX_TOKENS = int(os.getenv("CHUNK_MAX_TOKENS", "350"))
 CHUNK_OVERLAP_TOKENS = int(os.getenv("CHUNK_OVERLAP_TOKENS", "50"))
+
+# ---- LLM (any OpenAI-compatible chat API; defaults to Groq) ----
+LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.groq.com/openai/v1")
+LLM_API_KEY = os.getenv("LLM_API_KEY") or os.getenv("GROQ_API_KEY", "")
+LLM_MODEL = os.getenv("LLM_MODEL") or os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+JUDGE_MODEL = os.getenv("JUDGE_MODEL") or os.getenv("GROQ_JUDGE_MODEL", "openai/gpt-oss-20b")
+LLM_REASONING_EFFORT = os.getenv("LLM_REASONING_EFFORT", "low")   # only sent to gpt-oss models
+TOP_K = int(os.getenv("TOP_K", "5"))
