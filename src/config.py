@@ -31,3 +31,10 @@ LLM_MODEL = os.getenv("LLM_MODEL") or os.getenv("GROQ_MODEL", "openai/gpt-oss-12
 JUDGE_MODEL = os.getenv("JUDGE_MODEL") or os.getenv("GROQ_JUDGE_MODEL", "openai/gpt-oss-20b")
 LLM_REASONING_EFFORT = os.getenv("LLM_REASONING_EFFORT", "low")   # only sent to gpt-oss models
 TOP_K = int(os.getenv("TOP_K", "5"))
+
+# ---- Evaluation / reranking ----
+EVAL_DIR = ROOT / "eval"
+TESTSET_PATH = EVAL_DIR / "testset.jsonl"
+RESULTS_DIR = EVAL_DIR / "results"
+# Small cross-encoder that is fast enough on CPU.
+RERANK_MODEL = os.getenv("RERANK_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")

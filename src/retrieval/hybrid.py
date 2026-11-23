@@ -35,6 +35,8 @@ def hybrid_search(
     n_candidates: int = 20,
     dense_fn: Callable[[str, int], list[str]] = _dense_ids,
     bm25_fn: Callable[[str, int], list[str]] = _bm25_ids,
+    rerank: bool = False,
+    rerank_fn: Callable | None = None,
 ) -> list[dict]:
     """Return the top-k fused chunks. Each result also records its rank in each retriever
     (None = not in that retriever's top n_candidates), which makes the behaviour easy to inspect."""
@@ -45,10 +47,19 @@ def hybrid_search(
     dense_rank = {i: r for r, i in enumerate(dense_ids, 1)}
     bm25_rank = {i: r for r, i in enumerate(bm25_ids, 1)}
 
+    fused = rrf([dense_ids, bm25_ids])
+    scored = {i: s for i, s in fused}
+
+    if rerank:   # re-order the best n_candidates fused results with the cross-encoder
+        from src.retrieval.rerank import rerank as rerank_records
+        candidates = [dict(by_id[i]) for i, _ in fused[:n_candidates]]
+        ordered = (rerank_fn or rerank_records)(query, candidates, top_k=k)
+    else:
+        ordered = [dict(by_id[i]) for i, _ in fused[:k]]
+
     results = []
-    for id_, score in rrf([dense_ids, bm25_ids])[:k]:
-        rec = dict(by_id[id_])
-        rec.update(score=score, dense_rank=dense_rank.get(id_), bm25_rank=bm25_rank.get(id_))
+    for rec in ordered:
+        rec.update(score=scored[rec["id"]], dense_rank=dense_rank.get(rec["id"]), bm25_rank=bm25_rank.get(rec["id"]))
         results.append(rec)
     return results
 
