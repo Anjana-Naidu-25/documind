@@ -735,26 +735,6 @@
         "chunk_mrr": 1.0
       },
       {
-        "id": "con-36",
-        "type": "concept",
-        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
-        "top_urls": [
-          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
-          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
-          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"
-        ],
-        "page_hit@1": 1.0,
-        "chunk_hit@1": 0.0,
-        "page_hit@3": 1.0,
-        "chunk_hit@3": 0.0,
-        "page_hit@5": 1.0,
-        "chunk_hit@5": 0.0,
-        "page_hit@10": 1.0,
-        "chunk_hit@10": 0.0,
-        "page_mrr": 1.0,
-        "chunk_mrr": 0.0
-      },
-      {
         "id": "con-37",
         "type": "concept",
         "question": "After a forced storage detach timeout, how should unhealthy pods that remain attached to volumes be handled?",
@@ -1849,28 +1829,6 @@
         "chunk_mrr": 0.5
       },
       {
-        "id": "con-36",
-        "type": "concept",
-        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
-        "top_urls": [
-          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
-          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/",
-          "https://kubernetes.io/docs/concepts/containers/runtime-class/",
-          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/",
-          "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/"
-        ],
-        "page_hit@1": 1.0,
-        "chunk_hit@1": 0.0,
-        "page_hit@3": 1.0,
-        "chunk_hit@3": 0.0,
-        "page_hit@5": 1.0,
-        "chunk_hit@5": 0.0,
-        "page_hit@10": 1.0,
-        "chunk_hit@10": 1.0,
-        "page_mrr": 1.0,
-        "chunk_mrr": 0.16666666666666666
-      },
-      {
         "id": "con-37",
         "type": "concept",
         "question": "After a forced storage detach timeout, how should unhealthy pods that remain attached to volumes be handled?",
@@ -2961,28 +2919,6 @@
         "chunk_hit@10": 1.0,
         "page_mrr": 1.0,
         "chunk_mrr": 1.0
-      },
-      {
-        "id": "con-36",
-        "type": "concept",
-        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
-        "top_urls": [
-          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
-          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/",
-          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
-          "https://kubernetes.io/docs/concepts/containers/runtime-class/",
-          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/"
-        ],
-        "page_hit@1": 1.0,
-        "chunk_hit@1": 0.0,
-        "page_hit@3": 1.0,
-        "chunk_hit@3": 0.0,
-        "page_hit@5": 1.0,
-        "chunk_hit@5": 0.0,
-        "page_hit@10": 1.0,
-        "chunk_hit@10": 0.0,
-        "page_mrr": 1.0,
-        "chunk_mrr": 0.0
       },
       {
         "id": "con-37",
@@ -4081,25 +4017,6 @@
         "chunk_mrr": 1.0
       },
       {
-        "id": "con-36",
-        "type": "concept",
-        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
-        "top_urls": [
-          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
-          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/"
-        ],
-        "page_hit@1": 1.0,
-        "chunk_hit@1": 0.0,
-        "page_hit@3": 1.0,
-        "chunk_hit@3": 0.0,
-        "page_hit@5": 1.0,
-        "chunk_hit@5": 0.0,
-        "page_hit@10": 1.0,
-        "chunk_hit@10": 0.0,
-        "page_mrr": 1.0,
-        "chunk_mrr": 0.0
-      },
-      {
         "id": "con-37",
         "type": "concept",
         "question": "After a forced storage detach timeout, how should unhealthy pods that remain attached to volumes be handled?",
@@ -4463,17 +4380,17 @@
   "summary": {
     "dense": {
       "overall": {
-        "chunk_hit@1": 0.542,
-        "chunk_hit@3": 0.792,
-        "chunk_hit@5": 0.854,
-        "chunk_hit@10": 0.875,
-        "chunk_mrr": 0.676,
-        "page_hit@1": 0.812,
-        "page_hit@3": 0.958,
+        "chunk_hit@1": 0.553,
+        "chunk_hit@3": 0.809,
+        "chunk_hit@5": 0.872,
+        "chunk_hit@10": 0.894,
+        "chunk_mrr": 0.691,
+        "page_hit@1": 0.809,
+        "page_hit@3": 0.957,
         "page_hit@5": 0.979,
         "page_hit@10": 0.979,
-        "page_mrr": 0.891,
-        "n": 48
+        "page_mrr": 0.888,
+        "n": 47
       },
       "by_type": {
         "identifier": {
@@ -4503,17 +4420,17 @@
           "n": 16
         },
         "concept": {
-          "chunk_hit@1": 0.625,
-          "chunk_hit@3": 0.75,
-          "chunk_hit@5": 0.812,
-          "chunk_hit@10": 0.875,
-          "chunk_mrr": 0.709,
-          "page_hit@1": 0.812,
+          "chunk_hit@1": 0.667,
+          "chunk_hit@3": 0.8,
+          "chunk_hit@5": 0.867,
+          "chunk_hit@10": 0.933,
+          "chunk_mrr": 0.757,
+          "page_hit@1": 0.8,
           "page_hit@3": 1.0,
           "page_hit@5": 1.0,
           "page_hit@10": 1.0,
-          "page_mrr": 0.906,
-          "n": 16
+          "page_mrr": 0.9,
+          "n": 15
         }
       },
       "comparison": {
@@ -4525,17 +4442,17 @@
     },
     "bm25": {
       "overall": {
-        "chunk_hit@1": 0.583,
-        "chunk_hit@3": 0.854,
-        "chunk_hit@5": 0.875,
-        "chunk_hit@10": 0.917,
-        "chunk_mrr": 0.723,
-        "page_hit@1": 0.792,
-        "page_hit@3": 0.958,
-        "page_hit@5": 0.958,
-        "page_hit@10": 0.958,
-        "page_mrr": 0.875,
-        "n": 48
+        "chunk_hit@1": 0.596,
+        "chunk_hit@3": 0.872,
+        "chunk_hit@5": 0.894,
+        "chunk_hit@10": 0.915,
+        "chunk_mrr": 0.735,
+        "page_hit@1": 0.787,
+        "page_hit@3": 0.957,
+        "page_hit@5": 0.957,
+        "page_hit@10": 0.957,
+        "page_mrr": 0.872,
+        "n": 47
       },
       "by_type": {
         "identifier": {
@@ -4565,17 +4482,17 @@
           "n": 16
         },
         "concept": {
-          "chunk_hit@1": 0.625,
-          "chunk_hit@3": 0.875,
-          "chunk_hit@5": 0.875,
-          "chunk_hit@10": 0.938,
-          "chunk_mrr": 0.75,
-          "page_hit@1": 0.75,
+          "chunk_hit@1": 0.667,
+          "chunk_hit@3": 0.933,
+          "chunk_hit@5": 0.933,
+          "chunk_hit@10": 0.933,
+          "chunk_mrr": 0.789,
+          "page_hit@1": 0.733,
           "page_hit@3": 1.0,
           "page_hit@5": 1.0,
           "page_hit@10": 1.0,
-          "page_mrr": 0.875,
-          "n": 16
+          "page_mrr": 0.867,
+          "n": 15
         }
       },
       "comparison": {
@@ -4587,17 +4504,17 @@
     },
     "hybrid (RRF)": {
       "overall": {
-        "chunk_hit@1": 0.583,
-        "chunk_hit@3": 0.833,
-        "chunk_hit@5": 0.875,
-        "chunk_hit@10": 0.958,
-        "chunk_mrr": 0.72,
-        "page_hit@1": 0.792,
+        "chunk_hit@1": 0.596,
+        "chunk_hit@3": 0.851,
+        "chunk_hit@5": 0.894,
+        "chunk_hit@10": 0.979,
+        "chunk_mrr": 0.735,
+        "page_hit@1": 0.787,
         "page_hit@3": 0.979,
         "page_hit@5": 1.0,
         "page_hit@10": 1.0,
-        "page_mrr": 0.887,
-        "n": 48
+        "page_mrr": 0.885,
+        "n": 47
       },
       "by_type": {
         "identifier": {
@@ -4627,17 +4544,17 @@
           "n": 16
         },
         "concept": {
-          "chunk_hit@1": 0.625,
-          "chunk_hit@3": 0.812,
-          "chunk_hit@5": 0.875,
-          "chunk_hit@10": 0.938,
-          "chunk_mrr": 0.734,
-          "page_hit@1": 0.812,
+          "chunk_hit@1": 0.667,
+          "chunk_hit@3": 0.867,
+          "chunk_hit@5": 0.933,
+          "chunk_hit@10": 1.0,
+          "chunk_mrr": 0.783,
+          "page_hit@1": 0.8,
           "page_hit@3": 1.0,
           "page_hit@5": 1.0,
           "page_hit@10": 1.0,
-          "page_mrr": 0.906,
-          "n": 16
+          "page_mrr": 0.9,
+          "n": 15
         }
       },
       "comparison": {
@@ -4649,17 +4566,17 @@
     },
     "hybrid + rerank": {
       "overall": {
-        "chunk_hit@1": 0.708,
-        "chunk_hit@3": 0.812,
-        "chunk_hit@5": 0.896,
-        "chunk_hit@10": 0.979,
-        "chunk_mrr": 0.785,
-        "page_hit@1": 0.875,
+        "chunk_hit@1": 0.723,
+        "chunk_hit@3": 0.83,
+        "chunk_hit@5": 0.915,
+        "chunk_hit@10": 1.0,
+        "chunk_mrr": 0.802,
+        "page_hit@1": 0.872,
         "page_hit@3": 1.0,
         "page_hit@5": 1.0,
         "page_hit@10": 1.0,
-        "page_mrr": 0.934,
-        "n": 48
+        "page_mrr": 0.933,
+        "n": 47
       },
       "by_type": {
         "identifier": {
@@ -4689,17 +4606,17 @@
           "n": 16
         },
         "concept": {
-          "chunk_hit@1": 0.75,
-          "chunk_hit@3": 0.812,
-          "chunk_hit@5": 0.875,
-          "chunk_hit@10": 0.938,
-          "chunk_mrr": 0.806,
-          "page_hit@1": 0.938,
+          "chunk_hit@1": 0.8,
+          "chunk_hit@3": 0.867,
+          "chunk_hit@5": 0.933,
+          "chunk_hit@10": 1.0,
+          "chunk_mrr": 0.86,
+          "page_hit@1": 0.933,
           "page_hit@3": 1.0,
           "page_hit@5": 1.0,
           "page_hit@10": 1.0,
-          "page_mrr": 0.969,
-          "n": 16
+          "page_mrr": 0.967,
+          "n": 15
         }
       },
       "comparison": {
