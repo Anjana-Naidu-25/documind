@@ -1,0 +1,4713 @@
+{
+  "per_question": {
+    "dense": [
+      {
+        "id": "ide-01",
+        "type": "identifier",
+        "question": "What does the `FileOrCreate` mode of a `hostPath` volume do, and what limitation must be considered when using it?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/storage/volumes/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-02",
+        "type": "identifier",
+        "question": "In the NodeLocal DNSCache configuration, what does the command `kubectl get svc kube-dns -n kube-system -o jsonpath={.spec.clusterIP}` retrieve and why is it needed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-03",
+        "type": "identifier",
+        "question": "What does the `base64` command do when used with `echo -n` to prepare secret data for a Kubernetes Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-config-file/",
+          "https://kubernetes.io/docs/concepts/security/secrets-good-practices/",
+          "https://kubernetes.io/docs/concepts/configuration/secret/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 0.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.25,
+        "chunk_mrr": 0.25
+      },
+      {
+        "id": "ide-04",
+        "type": "identifier",
+        "question": "What happens when you run the `kubectl replace -f` command on an object whose spec contains fields that are managed by the cluster, such as a Service's `externalIPs`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/",
+          "https://kubernetes.io/docs/concepts/services-networking/service/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/",
+          "https://kubernetes.io/docs/concepts/services-networking/dual-stack/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-05",
+        "type": "identifier",
+        "question": "What is the purpose of the `reservedSystemCPUs` field in KubeletConfiguration and how does it interact with `kubeReserved` and `systemReserved`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-06",
+        "type": "identifier",
+        "question": "What does the `kubectl create token` command do in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/",
+          "https://kubernetes.io/docs/concepts/overview/kubectl/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 0.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 0.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 0.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 0.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "ide-07",
+        "type": "identifier",
+        "question": "What does setting the terminationMessagePolicy field of a container to \"FallbackToLogsOnError\" do?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/admission-webhooks-good-practices/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-08",
+        "type": "identifier",
+        "question": "What is the purpose of the `minGroupCount` field in the `spec.schedulingPolicy.gang` section of a CompositePodGroup?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/lifecycle/",
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/gang-scheduling/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/policies/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-09",
+        "type": "identifier",
+        "question": "What does the `requireServiceAccount` field control in a kubelet image credential provider configuration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubelet-credential-provider/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-10",
+        "type": "identifier",
+        "question": "What is the purpose of the kube-controller-manager flag `--max-endpoints-per-slice` and what limits can it be set to?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/",
+          "https://kubernetes.io/docs/concepts/services-networking/topology-aware-routing/",
+          "https://kubernetes.io/docs/concepts/services-networking/service/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/flow-control/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "ide-11",
+        "type": "identifier",
+        "question": "What is the purpose of the `kubectl label nodes <node-name> ssd=true` command in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-daemon/pods-some-nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/",
+          "https://kubernetes.io/docs/concepts/architecture/nodes/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "ide-12",
+        "type": "identifier",
+        "question": "What does the `kubectl logs --namespace=kube-system -l k8s-app=kube-dns` command retrieve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/kubectl-node-debug/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-logs/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-13",
+        "type": "identifier",
+        "question": "What is the purpose of the `samplingRatePerMillion` field in the KubeletConfiguration tracing section?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-traces/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/dra/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-14",
+        "type": "identifier",
+        "question": "What is the purpose of the `--enable-leader-migration` flag for the cloud-controller-manager and how should it be modified to disable leader migration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-15",
+        "type": "identifier",
+        "question": "What is the purpose of the `failureThreshold` field in a `startupProbe` and how does it affect container startup time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/probes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/init-containers/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-16",
+        "type": "identifier",
+        "question": "What is the purpose of using the `kubectl apply` command when configuring CNI for a mixed Linux and Windows Kubernetes cluster?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/concepts/overview/kubectl/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/",
+          "https://kubernetes.io/docs/tasks/tools/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-17",
+        "type": "howto",
+        "question": "How can I create a kubectl plugin that receives additional arguments and flags when invoked through the kubectl command?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/",
+          "https://kubernetes.io/docs/concepts/overview/kubectl/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-18",
+        "type": "howto",
+        "question": "How can I add a toleration to an existing Deployment using a strategic merge patch with kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-19",
+        "type": "howto",
+        "question": "How can I restore a Kubernetes node to its normal state after it has been drained?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/",
+          "https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/upgrading-windows-nodes/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "how-20",
+        "type": "howto",
+        "question": "How can I verify that the nginx Service is reachable from another Pod in the default namespace using a busybox container?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/",
+          "https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-21",
+        "type": "howto",
+        "question": "How can I set a specific context as the current one and then view only its configuration details using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/",
+          "https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "how-22",
+        "type": "howto",
+        "question": "In the Topology Manager memory manager state JSON, which field shows the amount of free memory for each NUMA node?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/topology/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-23",
+        "type": "howto",
+        "question": "How can I enable hostPort support for a CNI networking plugin in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/networking/",
+          "https://kubernetes.io/docs/concepts/architecture/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/network-policy-provider/antrea-network-policy/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-24",
+        "type": "howto",
+        "question": "What does Kubernetes do with a manually created Node object that is not yet healthy, and how can you stop it from being checked?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/architecture/nodes/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/node-declared-features/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-25",
+        "type": "howto",
+        "question": "How can I create a LimitRange in a specific namespace that enforces a minimum of 500\u202fMiB and a maximum of 1\u202fGiB memory for containers, and then view its details?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/policy/limit-range/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/limit-storage-consumption/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "how-26",
+        "type": "howto",
+        "question": "How can I add a custom description annotation to an existing pod using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/management/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-27",
+        "type": "howto",
+        "question": "How do I install kubectl on a Linux system that supports snap packages?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/",
+          "https://kubernetes.io/docs/tasks/tools/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-28",
+        "type": "howto",
+        "question": "How can I set a specific ConfigMap key as an environment variable in a pod, and what happens if the ConfigMap contains keys with invalid characters for environment variable names?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-29",
+        "type": "howto",
+        "question": "What are the length and character requirements for a Kubernetes label value?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/names/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-metrics/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.2
+      },
+      {
+        "id": "how-30",
+        "type": "howto",
+        "question": "How do I list the environment variables of a running container named\u202fshell-demo using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-via-file/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/",
+          "https://kubernetes.io/docs/concepts/containers/container-environment/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-31",
+        "type": "howto",
+        "question": "How can I resume a paused Deployment rollout and watch the new ReplicaSet progress using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-32",
+        "type": "howto",
+        "question": "How can I decrease the replica count of a Deployment named nginx-deployment to two pods using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/run-application/scale-deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/concepts/workloads/management/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-33",
+        "type": "concept",
+        "question": "How do Node autoscaling and Horizontal Pod Autoscaling work together to handle changes in application load?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-autoscaling/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+          "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/",
+          "https://kubernetes.io/docs/tasks/run-application/scale-deployment/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-34",
+        "type": "concept",
+        "question": "What are the connectivity and configuration limitations of the Flannel VXLAN CNI plugin on Windows?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/windows-networking/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/migrating-from-dockershim/troubleshooting-cni-plugin-related-errors/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/addons/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-35",
+        "type": "concept",
+        "question": "What is the purpose of the pause container in a Kubernetes pod and which pause image is recommended for Windows nodes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/windows/intro/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/concepts/windows/user-guide/",
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/overview/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-36",
+        "type": "concept",
+        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "con-37",
+        "type": "concept",
+        "question": "After a forced storage detach timeout, how should unhealthy pods that remain attached to volumes be handled?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-38",
+        "type": "concept",
+        "question": "What are the default values for the successfulJobsHistoryLimit and failedJobsHistoryLimit fields in a CronJob spec, and how can they be set to keep no jobs?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-39",
+        "type": "concept",
+        "question": "What is the controllers pattern in Kubernetes and how does it relate to the Operator pattern?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/architecture/controller/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-40",
+        "type": "concept",
+        "question": "What encryption scheme does the Kubernetes kms v2 provider use and how are its data encryption keys managed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "con-41",
+        "type": "concept",
+        "question": "How can I specify that different parts of a workload need to be co-located at both the availability zone level and the rack level in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/topology-aware-scheduling/",
+          "https://kubernetes.io/docs/concepts/workloads/",
+          "https://kubernetes.io/docs/concepts/workloads/management/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/topology/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-42",
+        "type": "concept",
+        "question": "How does a Kubernetes administrator enable Pods to use GPUs, and what resource name is exposed for scheduling after installing the device plugin?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/device-plugins/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-43",
+        "type": "concept",
+        "question": "What default ClusterRole must be granted to an extension apiserver's service account so it can submit SubjectAccessReview requests for authorization?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/",
+          "https://kubernetes.io/docs/concepts/security/rbac-good-practices/",
+          "https://kubernetes.io/docs/concepts/security/service-accounts/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-44",
+        "type": "concept",
+        "question": "In a PriorityLevelConfiguration, how does changing the hand size influence the probability of serving a single request when the number of queues is fixed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/flow-control/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.25
+      },
+      {
+        "id": "con-45",
+        "type": "concept",
+        "question": "What is a StorageClass in Kubernetes and what purpose does it serve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/storage/storage-classes/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/",
+          "https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/storage-version/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-46",
+        "type": "concept",
+        "question": "What happens to images that are already present on a node when the KubeletEnsureSecretPulledImages feature is enabled for the first time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-47",
+        "type": "concept",
+        "question": "Why are cross\u2011namespace owner references prohibited in Kubernetes, and what happens to a namespaced dependent if its owner is not in the same namespace?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/",
+          "https://kubernetes.io/docs/concepts/architecture/garbage-collection/",
+          "https://kubernetes.io/docs/concepts/policy/resource-quotas/",
+          "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/user-namespaces/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-48",
+        "type": "concept",
+        "question": "Where can app developers find documentation on setting CPU and memory requests and limits for containers, pods, and namespaces in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.1
+      },
+      {
+        "id": "cmp-01",
+        "type": "comparison",
+        "question": "What is the difference between a ConfigMap and a Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/",
+          "https://kubernetes.io/docs/concepts/configuration/",
+          "https://kubernetes.io/docs/concepts/storage/projected-volumes/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 1.0,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-02",
+        "type": "comparison",
+        "question": "When should I use a StatefulSet instead of a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/",
+          "https://kubernetes.io/docs/tasks/run-application/force-delete-stateful-set-pod/",
+          "https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-03",
+        "type": "comparison",
+        "question": "How is a CronJob different from a Job?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-04",
+        "type": "comparison",
+        "question": "What is the difference between a DaemonSet and a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-05",
+        "type": "comparison",
+        "question": "How do taints and tolerations differ from node affinity?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-06",
+        "type": "comparison",
+        "question": "What is the difference between namespaces and labels?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/concepts/services-networking/network-policies/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-namespace-labels/",
+          "https://kubernetes.io/docs/concepts/security/rbac-good-practices/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-07",
+        "type": "comparison",
+        "question": "How do init containers differ from sidecar containers?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/init-containers/",
+          "https://kubernetes.io/docs/concepts/configuration/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-08",
+        "type": "comparison",
+        "question": "What is the difference between an Ingress and a Service?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/ingress/",
+          "https://kubernetes.io/docs/concepts/services-networking/service/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      }
+    ],
+    "bm25": [
+      {
+        "id": "ide-01",
+        "type": "identifier",
+        "question": "What does the `FileOrCreate` mode of a `hostPath` volume do, and what limitation must be considered when using it?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/storage/volumes/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-02",
+        "type": "identifier",
+        "question": "In the NodeLocal DNSCache configuration, what does the command `kubectl get svc kube-dns -n kube-system -o jsonpath={.spec.clusterIP}` retrieve and why is it needed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-03",
+        "type": "identifier",
+        "question": "What does the `base64` command do when used with `echo -n` to prepare secret data for a Kubernetes Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-config-file/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/",
+          "https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/",
+          "https://kubernetes.io/docs/concepts/configuration/secret/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-04",
+        "type": "identifier",
+        "question": "What happens when you run the `kubectl replace -f` command on an object whose spec contains fields that are managed by the cluster, such as a Service's `externalIPs`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/",
+          "https://kubernetes.io/docs/concepts/services-networking/service/",
+          "https://kubernetes.io/docs/concepts/security/security-checklist/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-05",
+        "type": "identifier",
+        "question": "What is the purpose of the `reservedSystemCPUs` field in KubeletConfiguration and how does it interact with `kubeReserved` and `systemReserved`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-06",
+        "type": "identifier",
+        "question": "What does the `kubectl create token` command do in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+          "https://kubernetes.io/docs/concepts/configuration/secret/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-linux-nodes/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-07",
+        "type": "identifier",
+        "question": "What does setting the terminationMessagePolicy field of a container to \"FallbackToLogsOnError\" do?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-08",
+        "type": "identifier",
+        "question": "What is the purpose of the `minGroupCount` field in the `spec.schedulingPolicy.gang` section of a CompositePodGroup?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/",
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/lifecycle/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/policies/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/topology-aware-scheduling/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-09",
+        "type": "identifier",
+        "question": "What does the `requireServiceAccount` field control in a kubelet image credential provider configuration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubelet-credential-provider/",
+          "https://kubernetes.io/docs/concepts/containers/images/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-10",
+        "type": "identifier",
+        "question": "What is the purpose of the kube-controller-manager flag `--max-endpoints-per-slice` and what limits can it be set to?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/",
+          "https://kubernetes.io/docs/concepts/services-networking/topology-aware-routing/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-11",
+        "type": "identifier",
+        "question": "What is the purpose of the `kubectl label nodes <node-name> ssd=true` command in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-daemon/pods-some-nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-12",
+        "type": "identifier",
+        "question": "What does the `kubectl logs --namespace=kube-system -l k8s-app=kube-dns` command retrieve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-reconfigure/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-13",
+        "type": "identifier",
+        "question": "What is the purpose of the `samplingRatePerMillion` field in the KubeletConfiguration tracing section?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-traces/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/user-namespaces/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/observability/",
+          "https://kubernetes.io/docs/concepts/architecture/nodes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-14",
+        "type": "identifier",
+        "question": "What is the purpose of the `--enable-leader-migration` flag for the cloud-controller-manager and how should it be modified to disable leader migration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-15",
+        "type": "identifier",
+        "question": "What is the purpose of the `failureThreshold` field in a `startupProbe` and how does it affect container startup time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-16",
+        "type": "identifier",
+        "question": "What is the purpose of using the `kubectl apply` command when configuring CNI for a mixed Linux and Windows Kubernetes cluster?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/concepts/services-networking/windows-networking/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/concepts/windows/user-guide/",
+          "https://kubernetes.io/docs/concepts/windows/intro/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-17",
+        "type": "howto",
+        "question": "How can I create a kubectl plugin that receives additional arguments and flags when invoked through the kubectl command?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-18",
+        "type": "howto",
+        "question": "How can I add a toleration to an existing Deployment using a strategic merge patch with kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-19",
+        "type": "howto",
+        "question": "How can I restore a Kubernetes node to its normal state after it has been drained?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/",
+          "https://kubernetes.io/docs/concepts/resource-management/pod-level-resource-managers/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 0.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 0.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 0.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 0.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "how-20",
+        "type": "howto",
+        "question": "How can I verify that the nginx Service is reachable from another Pod in the default namespace using a busybox container?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-21",
+        "type": "howto",
+        "question": "How can I set a specific context as the current one and then view only its configuration details using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.16666666666666666
+      },
+      {
+        "id": "how-22",
+        "type": "howto",
+        "question": "In the Topology Manager memory manager state JSON, which field shows the amount of free memory for each NUMA node?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/topology/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.2
+      },
+      {
+        "id": "how-23",
+        "type": "howto",
+        "question": "How can I enable hostPort support for a CNI networking plugin in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+          "https://kubernetes.io/docs/concepts/services-networking/windows-networking/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/",
+          "https://kubernetes.io/docs/concepts/security/pod-security-standards/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/addons/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-24",
+        "type": "howto",
+        "question": "What does Kubernetes do with a manually created Node object that is not yet healthy, and how can you stop it from being checked?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/architecture/nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/tasks/run-application/configure-pdb/",
+          "https://kubernetes.io/docs/concepts/storage/volume-snapshots/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-25",
+        "type": "howto",
+        "question": "How can I create a LimitRange in a specific namespace that enforces a minimum of 500\u202fMiB and a maximum of 1\u202fGiB memory for containers, and then view its details?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/",
+          "https://kubernetes.io/docs/concepts/policy/limit-range/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/limit-storage-consumption/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-26",
+        "type": "howto",
+        "question": "How can I add a custom description annotation to an existing pod using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/job/pod-failure-policy/",
+          "https://kubernetes.io/docs/concepts/security/service-accounts/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definition-versioning/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-namespace-labels/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 0.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 0.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 0.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 0.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "how-27",
+        "type": "howto",
+        "question": "How do I install kubectl on a Linux system that supports snap packages?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/",
+          "https://kubernetes.io/docs/concepts/windows/",
+          "https://kubernetes.io/docs/tasks/tools/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-28",
+        "type": "howto",
+        "question": "How can I set a specific ConfigMap key as an environment variable in a pod, and what happens if the ConfigMap contains keys with invalid characters for environment variable names?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-29",
+        "type": "howto",
+        "question": "What are the length and character requirements for a Kubernetes label value?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/names/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-condition/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-hostname/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-30",
+        "type": "howto",
+        "question": "How do I list the environment variables of a running container named\u202fshell-demo using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-interdependent-environment-variables/",
+          "https://kubernetes.io/docs/concepts/containers/container-environment/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-31",
+        "type": "howto",
+        "question": "How can I resume a paused Deployment rollout and watch the new ReplicaSet progress using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "how-32",
+        "type": "howto",
+        "question": "How can I decrease the replica count of a Deployment named nginx-deployment to two pods using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/run-application/scale-deployment/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "con-33",
+        "type": "concept",
+        "question": "How do Node autoscaling and Horizontal Pod Autoscaling work together to handle changes in application load?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-autoscaling/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-34",
+        "type": "concept",
+        "question": "What are the connectivity and configuration limitations of the Flannel VXLAN CNI plugin on Windows?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/windows-networking/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubelet-in-userns/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/addons/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-35",
+        "type": "concept",
+        "question": "What is the purpose of the pause container in a Kubernetes pod and which pause image is recommended for Windows nodes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/concepts/windows/intro/",
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/migrating-from-dockershim/change-runtime-containerd/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-36",
+        "type": "concept",
+        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/",
+          "https://kubernetes.io/docs/concepts/containers/runtime-class/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/",
+          "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.16666666666666666
+      },
+      {
+        "id": "con-37",
+        "type": "concept",
+        "question": "After a forced storage detach timeout, how should unhealthy pods that remain attached to volumes be handled?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability/",
+          "https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/",
+          "https://kubernetes.io/docs/concepts/storage/volumes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-38",
+        "type": "concept",
+        "question": "What are the default values for the successfulJobsHistoryLimit and failedJobsHistoryLimit fields in a CronJob spec, and how can they be set to keep no jobs?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-39",
+        "type": "concept",
+        "question": "What is the controllers pattern in Kubernetes and how does it relate to the Operator pattern?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-40",
+        "type": "concept",
+        "question": "What encryption scheme does the Kubernetes kms v2 provider use and how are its data encryption keys managed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-41",
+        "type": "concept",
+        "question": "How can I specify that different parts of a workload need to be co-located at both the availability zone level and the rack level in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/topology-aware-scheduling/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/concepts/workloads/podgroup-api/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-42",
+        "type": "concept",
+        "question": "How does a Kubernetes administrator enable Pods to use GPUs, and what resource name is exposed for scheduling after installing the device plugin?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/device-plugins/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/",
+          "https://kubernetes.io/docs/concepts/policy/resource-quotas/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-43",
+        "type": "concept",
+        "question": "What default ClusterRole must be granted to an extension apiserver's service account so it can submit SubjectAccessReview requests for authorization?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/setup-extension-api-server/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-metrics/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-44",
+        "type": "concept",
+        "question": "In a PriorityLevelConfiguration, how does changing the hand size influence the probability of serving a single request when the number of queues is fixed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/flow-control/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "con-45",
+        "type": "concept",
+        "question": "What is a StorageClass in Kubernetes and what purpose does it serve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/",
+          "https://kubernetes.io/docs/concepts/storage/storage-classes/",
+          "https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+          "https://kubernetes.io/docs/concepts/policy/resource-quotas/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "con-46",
+        "type": "concept",
+        "question": "What happens to images that are already present on a node when the KubeletEnsureSecretPulledImages feature is enabled for the first time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/architecture/garbage-collection/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-47",
+        "type": "concept",
+        "question": "Why are cross\u2011namespace owner references prohibited in Kubernetes, and what happens to a namespaced dependent if its owner is not in the same namespace?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/",
+          "https://kubernetes.io/docs/concepts/architecture/garbage-collection/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/finalizers/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/use-cascading-deletion/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-48",
+        "type": "concept",
+        "question": "Where can app developers find documentation on setting CPU and memory requests and limits for containers, pods, and namespaces in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "cmp-01",
+        "type": "comparison",
+        "question": "What is the difference between a ConfigMap and a Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/concepts/storage/projected-volumes/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-02",
+        "type": "comparison",
+        "question": "When should I use a StatefulSet instead of a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/tasks/run-application/scale-stateful-set/",
+          "https://kubernetes.io/docs/tasks/run-application/delete-stateful-set/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/",
+          "https://kubernetes.io/docs/tasks/run-application/force-delete-stateful-set-pod/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-03",
+        "type": "comparison",
+        "question": "How is a CronJob different from a Job?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-04",
+        "type": "comparison",
+        "question": "What is the difference between a DaemonSet and a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/",
+          "https://kubernetes.io/docs/concepts/workloads/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-05",
+        "type": "comparison",
+        "question": "How do taints and tolerations differ from node affinity?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/device-taints/",
+          "https://kubernetes.io/docs/concepts/windows/user-guide/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-06",
+        "type": "comparison",
+        "question": "What is the difference between namespaces and labels?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/namespaces/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/concepts/services-networking/network-policies/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-07",
+        "type": "comparison",
+        "question": "How do init containers differ from sidecar containers?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/init-containers/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-08",
+        "type": "comparison",
+        "question": "What is the difference between an Ingress and a Service?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/ingress/",
+          "https://kubernetes.io/docs/concepts/services-networking/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      }
+    ],
+    "hybrid (RRF)": [
+      {
+        "id": "ide-01",
+        "type": "identifier",
+        "question": "What does the `FileOrCreate` mode of a `hostPath` volume do, and what limitation must be considered when using it?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/storage/volumes/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-02",
+        "type": "identifier",
+        "question": "In the NodeLocal DNSCache configuration, what does the command `kubectl get svc kube-dns -n kube-system -o jsonpath={.spec.clusterIP}` retrieve and why is it needed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-03",
+        "type": "identifier",
+        "question": "What does the `base64` command do when used with `echo -n` to prepare secret data for a Kubernetes Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-config-file/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/",
+          "https://kubernetes.io/docs/concepts/security/secrets-good-practices/",
+          "https://kubernetes.io/docs/concepts/configuration/secret/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-04",
+        "type": "identifier",
+        "question": "What happens when you run the `kubectl replace -f` command on an object whose spec contains fields that are managed by the cluster, such as a Service's `externalIPs`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/",
+          "https://kubernetes.io/docs/concepts/services-networking/service/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/",
+          "https://kubernetes.io/docs/concepts/services-networking/dual-stack/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-05",
+        "type": "identifier",
+        "question": "What is the purpose of the `reservedSystemCPUs` field in KubeletConfiguration and how does it interact with `kubeReserved` and `systemReserved`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-06",
+        "type": "identifier",
+        "question": "What does the `kubectl create token` command do in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+          "https://kubernetes.io/docs/concepts/configuration/secret/",
+          "https://kubernetes.io/docs/concepts/security/rbac-good-practices/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-linux-nodes/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.3333333333333333,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "ide-07",
+        "type": "identifier",
+        "question": "What does setting the terminationMessagePolicy field of a container to \"FallbackToLogsOnError\" do?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/admission-webhooks-good-practices/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-08",
+        "type": "identifier",
+        "question": "What is the purpose of the `minGroupCount` field in the `spec.schedulingPolicy.gang` section of a CompositePodGroup?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/lifecycle/",
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/policies/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/gang-scheduling/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-09",
+        "type": "identifier",
+        "question": "What does the `requireServiceAccount` field control in a kubelet image credential provider configuration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubelet-credential-provider/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-10",
+        "type": "identifier",
+        "question": "What is the purpose of the kube-controller-manager flag `--max-endpoints-per-slice` and what limits can it be set to?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/topology-aware-routing/",
+          "https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/",
+          "https://kubernetes.io/docs/concepts/services-networking/service/",
+          "https://kubernetes.io/docs/concepts/architecture/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/flow-control/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.16666666666666666
+      },
+      {
+        "id": "ide-11",
+        "type": "identifier",
+        "question": "What is the purpose of the `kubectl label nodes <node-name> ssd=true` command in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-daemon/pods-some-nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.16666666666666666
+      },
+      {
+        "id": "ide-12",
+        "type": "identifier",
+        "question": "What does the `kubectl logs --namespace=kube-system -l k8s-app=kube-dns` command retrieve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/kubectl-node-debug/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-logs/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-reconfigure/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-13",
+        "type": "identifier",
+        "question": "What is the purpose of the `samplingRatePerMillion` field in the KubeletConfiguration tracing section?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-traces/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/dra/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/user-namespaces/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-14",
+        "type": "identifier",
+        "question": "What is the purpose of the `--enable-leader-migration` flag for the cloud-controller-manager and how should it be modified to disable leader migration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-15",
+        "type": "identifier",
+        "question": "What is the purpose of the `failureThreshold` field in a `startupProbe` and how does it affect container startup time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-16",
+        "type": "identifier",
+        "question": "What is the purpose of using the `kubectl apply` command when configuring CNI for a mixed Linux and Windows Kubernetes cluster?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/tasks/tools/",
+          "https://kubernetes.io/docs/concepts/windows/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+          "https://kubernetes.io/docs/concepts/overview/kubectl/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-17",
+        "type": "howto",
+        "question": "How can I create a kubectl plugin that receives additional arguments and flags when invoked through the kubectl command?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-18",
+        "type": "howto",
+        "question": "How can I add a toleration to an existing Deployment using a strategic merge patch with kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-19",
+        "type": "howto",
+        "question": "How can I restore a Kubernetes node to its normal state after it has been drained?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/disruptions/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 0.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.25,
+        "chunk_mrr": 0.2
+      },
+      {
+        "id": "how-20",
+        "type": "howto",
+        "question": "How can I verify that the nginx Service is reachable from another Pod in the default namespace using a busybox container?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/",
+          "https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-21",
+        "type": "howto",
+        "question": "How can I set a specific context as the current one and then view only its configuration details using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.1
+      },
+      {
+        "id": "how-22",
+        "type": "howto",
+        "question": "In the Topology Manager memory manager state JSON, which field shows the amount of free memory for each NUMA node?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/topology/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "how-23",
+        "type": "howto",
+        "question": "How can I enable hostPort support for a CNI networking plugin in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/addons/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/migrating-from-dockershim/troubleshooting-cni-plugin-related-errors/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-24",
+        "type": "howto",
+        "question": "What does Kubernetes do with a manually created Node object that is not yet healthy, and how can you stop it from being checked?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/architecture/nodes/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/tasks/run-application/configure-pdb/",
+          "https://kubernetes.io/docs/concepts/storage/volume-snapshots/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-25",
+        "type": "howto",
+        "question": "How can I create a LimitRange in a specific namespace that enforces a minimum of 500\u202fMiB and a maximum of 1\u202fGiB memory for containers, and then view its details?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/policy/limit-range/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/limit-storage-consumption/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-26",
+        "type": "howto",
+        "question": "How can I add a custom description annotation to an existing pod using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/management/",
+          "https://kubernetes.io/docs/tasks/job/pod-failure-policy/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/concepts/security/service-accounts/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-27",
+        "type": "howto",
+        "question": "How do I install kubectl on a Linux system that supports snap packages?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/",
+          "https://kubernetes.io/docs/tasks/tools/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-28",
+        "type": "howto",
+        "question": "How can I set a specific ConfigMap key as an environment variable in a pod, and what happens if the ConfigMap contains keys with invalid characters for environment variable names?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-29",
+        "type": "howto",
+        "question": "What are the length and character requirements for a Kubernetes label value?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/names/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-metrics/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-30",
+        "type": "howto",
+        "question": "How do I list the environment variables of a running container named\u202fshell-demo using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/",
+          "https://kubernetes.io/docs/concepts/containers/container-environment/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-via-file/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-31",
+        "type": "howto",
+        "question": "How can I resume a paused Deployment rollout and watch the new ReplicaSet progress using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/",
+          "https://kubernetes.io/docs/concepts/workloads/management/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-32",
+        "type": "howto",
+        "question": "How can I decrease the replica count of a Deployment named nginx-deployment to two pods using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/",
+          "https://kubernetes.io/docs/tasks/run-application/scale-deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/concepts/workloads/management/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "con-33",
+        "type": "concept",
+        "question": "How do Node autoscaling and Horizontal Pod Autoscaling work together to handle changes in application load?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-autoscaling/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/",
+          "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-34",
+        "type": "concept",
+        "question": "What are the connectivity and configuration limitations of the Flannel VXLAN CNI plugin on Windows?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/windows-networking/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-35",
+        "type": "concept",
+        "question": "What is the purpose of the pause container in a Kubernetes pod and which pause image is recommended for Windows nodes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/windows/intro/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/concepts/windows/user-guide/",
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/overview/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-36",
+        "type": "concept",
+        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+          "https://kubernetes.io/docs/concepts/containers/runtime-class/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "con-37",
+        "type": "concept",
+        "question": "After a forced storage detach timeout, how should unhealthy pods that remain attached to volumes be handled?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/",
+          "https://kubernetes.io/docs/concepts/storage/volumes/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/dra-observability/",
+          "https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-38",
+        "type": "concept",
+        "question": "What are the default values for the successfulJobsHistoryLimit and failedJobsHistoryLimit fields in a CronJob spec, and how can they be set to keep no jobs?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-39",
+        "type": "concept",
+        "question": "What is the controllers pattern in Kubernetes and how does it relate to the Operator pattern?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/",
+          "https://kubernetes.io/docs/concepts/architecture/controller/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-40",
+        "type": "concept",
+        "question": "What encryption scheme does the Kubernetes kms v2 provider use and how are its data encryption keys managed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/storage-version-migration/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.16666666666666666
+      },
+      {
+        "id": "con-41",
+        "type": "concept",
+        "question": "How can I specify that different parts of a workload need to be co-located at both the availability zone level and the rack level in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/topology-aware-scheduling/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/",
+          "https://kubernetes.io/docs/concepts/workloads/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-42",
+        "type": "concept",
+        "question": "How does a Kubernetes administrator enable Pods to use GPUs, and what resource name is exposed for scheduling after installing the device plugin?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/device-plugins/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-43",
+        "type": "concept",
+        "question": "What default ClusterRole must be granted to an extension apiserver's service account so it can submit SubjectAccessReview requests for authorization?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/setup-extension-api-server/",
+          "https://kubernetes.io/docs/concepts/security/rbac-good-practices/",
+          "https://kubernetes.io/docs/concepts/architecture/cloud-controller/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-44",
+        "type": "concept",
+        "question": "In a PriorityLevelConfiguration, how does changing the hand size influence the probability of serving a single request when the number of queues is fixed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/flow-control/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "con-45",
+        "type": "concept",
+        "question": "What is a StorageClass in Kubernetes and what purpose does it serve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/storage/storage-classes/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+          "https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.25
+      },
+      {
+        "id": "con-46",
+        "type": "concept",
+        "question": "What happens to images that are already present on a node when the KubeletEnsureSecretPulledImages feature is enabled for the first time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-47",
+        "type": "concept",
+        "question": "Why are cross\u2011namespace owner references prohibited in Kubernetes, and what happens to a namespaced dependent if its owner is not in the same namespace?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/",
+          "https://kubernetes.io/docs/concepts/architecture/garbage-collection/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/finalizers/",
+          "https://kubernetes.io/docs/concepts/storage/volume-populators-and-data-sources/",
+          "https://kubernetes.io/docs/concepts/policy/resource-quotas/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-48",
+        "type": "concept",
+        "question": "Where can app developers find documentation on setting CPU and memory requests and limits for containers, pods, and namespaces in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "cmp-01",
+        "type": "comparison",
+        "question": "What is the difference between a ConfigMap and a Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/concepts/storage/projected-volumes/",
+          "https://kubernetes.io/docs/concepts/storage/volumes/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-02",
+        "type": "comparison",
+        "question": "When should I use a StatefulSet instead of a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/",
+          "https://kubernetes.io/docs/tasks/run-application/force-delete-stateful-set-pod/",
+          "https://kubernetes.io/docs/tasks/run-application/scale-stateful-set/",
+          "https://kubernetes.io/docs/concepts/workloads/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-03",
+        "type": "comparison",
+        "question": "How is a CronJob different from a Job?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-04",
+        "type": "comparison",
+        "question": "What is the difference between a DaemonSet and a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/",
+          "https://kubernetes.io/docs/concepts/workloads/",
+          "https://kubernetes.io/docs/tasks/manage-daemon/update-daemon-set/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-05",
+        "type": "comparison",
+        "question": "How do taints and tolerations differ from node affinity?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/device-taints/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-06",
+        "type": "comparison",
+        "question": "What is the difference between namespaces and labels?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/concepts/services-networking/network-policies/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/namespaces/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-namespace-labels/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 1.0,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-07",
+        "type": "comparison",
+        "question": "How do init containers differ from sidecar containers?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/init-containers/",
+          "https://kubernetes.io/docs/concepts/configuration/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-08",
+        "type": "comparison",
+        "question": "What is the difference between an Ingress and a Service?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/ingress/",
+          "https://kubernetes.io/docs/concepts/services-networking/service/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      }
+    ],
+    "hybrid + rerank": [
+      {
+        "id": "ide-01",
+        "type": "identifier",
+        "question": "What does the `FileOrCreate` mode of a `hostPath` volume do, and what limitation must be considered when using it?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/storage/volumes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-02",
+        "type": "identifier",
+        "question": "In the NodeLocal DNSCache configuration, what does the command `kubectl get svc kube-dns -n kube-system -o jsonpath={.spec.clusterIP}` retrieve and why is it needed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-03",
+        "type": "identifier",
+        "question": "What does the `base64` command do when used with `echo -n` to prepare secret data for a Kubernetes Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-config-file/",
+          "https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/",
+          "https://kubernetes.io/docs/concepts/configuration/secret/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.3333333333333333,
+        "chunk_mrr": 0.2
+      },
+      {
+        "id": "ide-04",
+        "type": "identifier",
+        "question": "What happens when you run the `kubectl replace -f` command on an object whose spec contains fields that are managed by the cluster, such as a Service's `externalIPs`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-05",
+        "type": "identifier",
+        "question": "What is the purpose of the `reservedSystemCPUs` field in KubeletConfiguration and how does it interact with `kubeReserved` and `systemReserved`?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/reserve-compute-resources/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-06",
+        "type": "identifier",
+        "question": "What does the `kubectl create token` command do in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/secret/",
+          "https://kubernetes.io/docs/concepts/overview/kubectl/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-07",
+        "type": "identifier",
+        "question": "What does setting the terminationMessagePolicy field of a container to \"FallbackToLogsOnError\" do?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-application/determine-reason-pod-failure/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+          "https://kubernetes.io/docs/concepts/windows/intro/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/admission-webhooks-good-practices/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-08",
+        "type": "identifier",
+        "question": "What is the purpose of the `minGroupCount` field in the `spec.schedulingPolicy.gang` section of a CompositePodGroup?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/policies/",
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/",
+          "https://kubernetes.io/docs/concepts/workloads/compositepodgroup-api/lifecycle/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "ide-09",
+        "type": "identifier",
+        "question": "What does the `requireServiceAccount` field control in a kubelet image credential provider configuration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubelet-credential-provider/",
+          "https://kubernetes.io/docs/concepts/containers/images/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.2
+      },
+      {
+        "id": "ide-10",
+        "type": "identifier",
+        "question": "What is the purpose of the kube-controller-manager flag `--max-endpoints-per-slice` and what limits can it be set to?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/flow-control/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+          "https://kubernetes.io/docs/concepts/architecture/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-11",
+        "type": "identifier",
+        "question": "What is the purpose of the `kubectl label nodes <node-name> ssd=true` command in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-daemon/pods-some-nodes/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/",
+          "https://kubernetes.io/docs/concepts/architecture/nodes/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/swap-memory-management/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-12",
+        "type": "identifier",
+        "question": "What does the `kubectl logs --namespace=kube-system -l k8s-app=kube-dns` command retrieve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-logs/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-13",
+        "type": "identifier",
+        "question": "What is the purpose of the `samplingRatePerMillion` field in the KubeletConfiguration tracing section?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/system-traces/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-reconfigure/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-14",
+        "type": "identifier",
+        "question": "What is the purpose of the `--enable-leader-migration` flag for the cloud-controller-manager and how should it be modified to disable leader migration?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/controller-manager-leader-migration/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-15",
+        "type": "identifier",
+        "question": "What is the purpose of the `failureThreshold` field in a `startupProbe` and how does it affect container startup time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/probes/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "ide-16",
+        "type": "identifier",
+        "question": "What is the purpose of using the `kubectl apply` command when configuring CNI for a mixed Linux and Windows Kubernetes cluster?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/concepts/overview/kubectl/",
+          "https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/",
+          "https://kubernetes.io/docs/concepts/workloads/management/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-17",
+        "type": "howto",
+        "question": "How can I create a kubectl plugin that receives additional arguments and flags when invoked through the kubectl command?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.3333333333333333
+      },
+      {
+        "id": "how-18",
+        "type": "howto",
+        "question": "How can I add a toleration to an existing Deployment using a strategic merge patch with kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.2
+      },
+      {
+        "id": "how-19",
+        "type": "howto",
+        "question": "How can I restore a Kubernetes node to its normal state after it has been drained?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/concepts/resource-management/pod-level-resource-managers/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/upgrading-windows-nodes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-20",
+        "type": "howto",
+        "question": "How can I verify that the nginx Service is reachable from another Pod in the default namespace using a busybox container?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-21",
+        "type": "howto",
+        "question": "How can I set a specific context as the current one and then view only its configuration details using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.14285714285714285
+      },
+      {
+        "id": "how-22",
+        "type": "howto",
+        "question": "In the Topology Manager memory manager state JSON, which field shows the amount of free memory for each NUMA node?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/topology/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/",
+          "https://kubernetes.io/docs/concepts/resource-management/resource-managers/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "how-23",
+        "type": "howto",
+        "question": "How can I enable hostPort support for a CNI networking plugin in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/networking/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/addons/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-24",
+        "type": "howto",
+        "question": "What does Kubernetes do with a manually created Node object that is not yet healthy, and how can you stop it from being checked?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/architecture/nodes/",
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/node-declared-features/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-25",
+        "type": "howto",
+        "question": "How can I create a LimitRange in a specific namespace that enforces a minimum of 500\u202fMiB and a maximum of 1\u202fGiB memory for containers, and then view its details?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/",
+          "https://kubernetes.io/docs/concepts/policy/limit-range/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/limit-storage-consumption/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-26",
+        "type": "howto",
+        "question": "How can I add a custom description annotation to an existing pod using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/management/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definition-versioning/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-namespace-labels/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-27",
+        "type": "howto",
+        "question": "How do I install kubectl on a Linux system that supports snap packages?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-28",
+        "type": "howto",
+        "question": "How can I set a specific ConfigMap key as an environment variable in a pod, and what happens if the ConfigMap contains keys with invalid characters for environment variable names?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.125
+      },
+      {
+        "id": "how-29",
+        "type": "howto",
+        "question": "What are the length and character requirements for a Kubernetes label value?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/names/",
+          "https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/",
+          "https://kubernetes.io/docs/concepts/containers/images/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.1
+      },
+      {
+        "id": "how-30",
+        "type": "howto",
+        "question": "How do I list the environment variables of a running container named\u202fshell-demo using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/define-interdependent-environment-variables/",
+          "https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/",
+          "https://kubernetes.io/docs/concepts/containers/container-environment/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-31",
+        "type": "howto",
+        "question": "How can I resume a paused Deployment rollout and watch the new ReplicaSet progress using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/",
+          "https://kubernetes.io/docs/concepts/workloads/management/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "how-32",
+        "type": "howto",
+        "question": "How can I decrease the replica count of a Deployment named nginx-deployment to two pods using kubectl?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/",
+          "https://kubernetes.io/docs/tasks/run-application/scale-deployment/",
+          "https://kubernetes.io/docs/concepts/workloads/management/",
+          "https://kubernetes.io/docs/tasks/manage-kubernetes-objects/update-api-object-kubectl-patch/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-33",
+        "type": "concept",
+        "question": "How do Node autoscaling and Horizontal Pod Autoscaling work together to handle changes in application load?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-autoscaling/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/dns-horizontal-autoscaling/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/",
+          "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-34",
+        "type": "concept",
+        "question": "What are the connectivity and configuration limitations of the Flannel VXLAN CNI plugin on Windows?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/windows-networking/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kubelet-in-userns/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/migrating-from-dockershim/troubleshooting-cni-plugin-related-errors/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-35",
+        "type": "concept",
+        "question": "What is the purpose of the pause container in a Kubernetes pod and which pause image is recommended for Windows nodes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/windows/intro/",
+          "https://kubernetes.io/docs/tasks/debug/debug-cluster/windows/",
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/windows/user-guide/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/advanced-pod-config/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-36",
+        "type": "concept",
+        "question": "Which Kubernetes resource kinds have specific supported field selector fields listed in the documentation?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/",
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 0.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.0
+      },
+      {
+        "id": "con-37",
+        "type": "concept",
+        "question": "After a forced storage detach timeout, how should unhealthy pods that remain attached to volumes be handled?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/",
+          "https://kubernetes.io/docs/tasks/run-application/delete-stateful-set/",
+          "https://kubernetes.io/docs/concepts/storage/storage-capacity/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/",
+          "https://kubernetes.io/docs/tasks/run-application/configure-pdb/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-38",
+        "type": "concept",
+        "question": "What are the default values for the successfulJobsHistoryLimit and failedJobsHistoryLimit fields in a CronJob spec, and how can they be set to keep no jobs?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-39",
+        "type": "concept",
+        "question": "What is the controllers pattern in Kubernetes and how does it relate to the Operator pattern?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/",
+          "https://kubernetes.io/docs/concepts/architecture/controller/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-40",
+        "type": "concept",
+        "question": "What encryption scheme does the Kubernetes kms v2 provider use and how are its data encryption keys managed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.25
+      },
+      {
+        "id": "con-41",
+        "type": "concept",
+        "question": "How can I specify that different parts of a workload need to be co-located at both the availability zone level and the rack level in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/workload-api/topology-aware-scheduling/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/",
+          "https://kubernetes.io/docs/concepts/workloads/podgroup-api/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-42",
+        "type": "concept",
+        "question": "How does a Kubernetes administrator enable Pods to use GPUs, and what resource name is exposed for scheduling after installing the device plugin?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/",
+          "https://kubernetes.io/docs/concepts/resource-management/dynamic-resource-allocation/how-dra-works/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/device-plugins/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-43",
+        "type": "concept",
+        "question": "What default ClusterRole must be granted to an extension apiserver's service account so it can submit SubjectAccessReview requests for authorization?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/",
+          "https://kubernetes.io/docs/concepts/security/service-accounts/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/",
+          "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-44",
+        "type": "concept",
+        "question": "In a PriorityLevelConfiguration, how does changing the hand size influence the probability of serving a single request when the number of queues is fixed?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/cluster-administration/flow-control/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 0.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 0.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 0.14285714285714285
+      },
+      {
+        "id": "con-45",
+        "type": "concept",
+        "question": "What is a StorageClass in Kubernetes and what purpose does it serve?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/storage/storage-classes/",
+          "https://kubernetes.io/docs/concepts/storage/volume-attributes-classes/",
+          "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/change-default-storage-class/",
+          "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-46",
+        "type": "concept",
+        "question": "What happens to images that are already present on a node when the KubeletEnsureSecretPulledImages feature is enabled for the first time?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/containers/images/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "con-47",
+        "type": "concept",
+        "question": "Why are cross\u2011namespace owner references prohibited in Kubernetes, and what happens to a namespaced dependent if its owner is not in the same namespace?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/",
+          "https://kubernetes.io/docs/concepts/architecture/garbage-collection/",
+          "https://kubernetes.io/docs/concepts/storage/volume-populators-and-data-sources/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/finalizers/",
+          "https://kubernetes.io/docs/concepts/policy/resource-quotas/"
+        ],
+        "page_hit@1": 0.0,
+        "chunk_hit@1": 0.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 0.5,
+        "chunk_mrr": 0.5
+      },
+      {
+        "id": "con-48",
+        "type": "concept",
+        "question": "Where can app developers find documentation on setting CPU and memory requests and limits for containers, pods, and namespaces in Kubernetes?",
+        "top_urls": [
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/",
+          "https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/",
+          "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/assign-pod-level-resources/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/"
+        ],
+        "page_hit@1": 1.0,
+        "chunk_hit@1": 1.0,
+        "page_hit@3": 1.0,
+        "chunk_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "chunk_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "chunk_hit@10": 1.0,
+        "page_mrr": 1.0,
+        "chunk_mrr": 1.0
+      },
+      {
+        "id": "cmp-01",
+        "type": "comparison",
+        "question": "What is the difference between a ConfigMap and a Secret?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/configuration/configmap/",
+          "https://kubernetes.io/docs/concepts/configuration/",
+          "https://kubernetes.io/docs/concepts/security/security-checklist/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/",
+          "https://kubernetes.io/docs/concepts/configuration/secret/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-02",
+        "type": "comparison",
+        "question": "When should I use a StatefulSet instead of a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/",
+          "https://kubernetes.io/docs/concepts/workloads/",
+          "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+          "https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/"
+        ],
+        "cov@5": 0.5,
+        "cov@10": 0.5,
+        "all@5": 0.0
+      },
+      {
+        "id": "cmp-03",
+        "type": "comparison",
+        "question": "How is a CronJob different from a Job?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+          "https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-04",
+        "type": "comparison",
+        "question": "What is the difference between a DaemonSet and a Deployment?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/",
+          "https://kubernetes.io/docs/concepts/workloads/",
+          "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-05",
+        "type": "comparison",
+        "question": "How do taints and tolerations differ from node affinity?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/",
+          "https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-06",
+        "type": "comparison",
+        "question": "What is the difference between namespaces and labels?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/",
+          "https://kubernetes.io/docs/concepts/services-networking/network-policies/",
+          "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+          "https://kubernetes.io/docs/tasks/configure-pod-container/enforce-standards-namespace-labels/",
+          "https://kubernetes.io/docs/concepts/security/rbac-good-practices/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-07",
+        "type": "comparison",
+        "question": "How do init containers differ from sidecar containers?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/workloads/pods/init-containers/",
+          "https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/",
+          "https://kubernetes.io/docs/concepts/configuration/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      },
+      {
+        "id": "cmp-08",
+        "type": "comparison",
+        "question": "What is the difference between an Ingress and a Service?",
+        "top_urls": [
+          "https://kubernetes.io/docs/concepts/services-networking/service/",
+          "https://kubernetes.io/docs/concepts/services-networking/ingress/"
+        ],
+        "cov@5": 1.0,
+        "cov@10": 1.0,
+        "all@5": 1.0
+      }
+    ]
+  },
+  "summary": {
+    "dense": {
+      "overall": {
+        "chunk_hit@1": 0.542,
+        "chunk_hit@3": 0.792,
+        "chunk_hit@5": 0.854,
+        "chunk_hit@10": 0.875,
+        "chunk_mrr": 0.676,
+        "page_hit@1": 0.812,
+        "page_hit@3": 0.958,
+        "page_hit@5": 0.979,
+        "page_hit@10": 0.979,
+        "page_mrr": 0.891,
+        "n": 48
+      },
+      "by_type": {
+        "identifier": {
+          "chunk_hit@1": 0.562,
+          "chunk_hit@3": 0.75,
+          "chunk_hit@5": 0.812,
+          "chunk_hit@10": 0.812,
+          "chunk_mrr": 0.672,
+          "page_hit@1": 0.75,
+          "page_hit@3": 0.875,
+          "page_hit@5": 0.938,
+          "page_hit@10": 0.938,
+          "page_mrr": 0.828,
+          "n": 16
+        },
+        "howto": {
+          "chunk_hit@1": 0.438,
+          "chunk_hit@3": 0.875,
+          "chunk_hit@5": 0.938,
+          "chunk_hit@10": 0.938,
+          "chunk_mrr": 0.648,
+          "page_hit@1": 0.875,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.938,
+          "n": 16
+        },
+        "concept": {
+          "chunk_hit@1": 0.625,
+          "chunk_hit@3": 0.75,
+          "chunk_hit@5": 0.812,
+          "chunk_hit@10": 0.875,
+          "chunk_mrr": 0.709,
+          "page_hit@1": 0.812,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.906,
+          "n": 16
+        }
+      },
+      "comparison": {
+        "cov@5": 0.875,
+        "cov@10": 0.938,
+        "all@5": 0.75,
+        "n": 8
+      }
+    },
+    "bm25": {
+      "overall": {
+        "chunk_hit@1": 0.583,
+        "chunk_hit@3": 0.854,
+        "chunk_hit@5": 0.875,
+        "chunk_hit@10": 0.917,
+        "chunk_mrr": 0.723,
+        "page_hit@1": 0.792,
+        "page_hit@3": 0.958,
+        "page_hit@5": 0.958,
+        "page_hit@10": 0.958,
+        "page_mrr": 0.875,
+        "n": 48
+      },
+      "by_type": {
+        "identifier": {
+          "chunk_hit@1": 0.75,
+          "chunk_hit@3": 1.0,
+          "chunk_hit@5": 1.0,
+          "chunk_hit@10": 1.0,
+          "chunk_mrr": 0.875,
+          "page_hit@1": 0.875,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.938,
+          "n": 16
+        },
+        "howto": {
+          "chunk_hit@1": 0.375,
+          "chunk_hit@3": 0.688,
+          "chunk_hit@5": 0.75,
+          "chunk_hit@10": 0.812,
+          "chunk_mrr": 0.544,
+          "page_hit@1": 0.75,
+          "page_hit@3": 0.875,
+          "page_hit@5": 0.875,
+          "page_hit@10": 0.875,
+          "page_mrr": 0.812,
+          "n": 16
+        },
+        "concept": {
+          "chunk_hit@1": 0.625,
+          "chunk_hit@3": 0.875,
+          "chunk_hit@5": 0.875,
+          "chunk_hit@10": 0.938,
+          "chunk_mrr": 0.75,
+          "page_hit@1": 0.75,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.875,
+          "n": 16
+        }
+      },
+      "comparison": {
+        "cov@5": 0.625,
+        "cov@10": 0.625,
+        "all@5": 0.25,
+        "n": 8
+      }
+    },
+    "hybrid (RRF)": {
+      "overall": {
+        "chunk_hit@1": 0.583,
+        "chunk_hit@3": 0.833,
+        "chunk_hit@5": 0.875,
+        "chunk_hit@10": 0.958,
+        "chunk_mrr": 0.72,
+        "page_hit@1": 0.792,
+        "page_hit@3": 0.979,
+        "page_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "page_mrr": 0.887,
+        "n": 48
+      },
+      "by_type": {
+        "identifier": {
+          "chunk_hit@1": 0.688,
+          "chunk_hit@3": 0.875,
+          "chunk_hit@5": 0.875,
+          "chunk_hit@10": 1.0,
+          "chunk_mrr": 0.792,
+          "page_hit@1": 0.75,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.865,
+          "n": 16
+        },
+        "howto": {
+          "chunk_hit@1": 0.438,
+          "chunk_hit@3": 0.812,
+          "chunk_hit@5": 0.875,
+          "chunk_hit@10": 0.938,
+          "chunk_mrr": 0.633,
+          "page_hit@1": 0.812,
+          "page_hit@3": 0.938,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.891,
+          "n": 16
+        },
+        "concept": {
+          "chunk_hit@1": 0.625,
+          "chunk_hit@3": 0.812,
+          "chunk_hit@5": 0.875,
+          "chunk_hit@10": 0.938,
+          "chunk_mrr": 0.734,
+          "page_hit@1": 0.812,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.906,
+          "n": 16
+        }
+      },
+      "comparison": {
+        "cov@5": 0.688,
+        "cov@10": 0.75,
+        "all@5": 0.375,
+        "n": 8
+      }
+    },
+    "hybrid + rerank": {
+      "overall": {
+        "chunk_hit@1": 0.708,
+        "chunk_hit@3": 0.812,
+        "chunk_hit@5": 0.896,
+        "chunk_hit@10": 0.979,
+        "chunk_mrr": 0.785,
+        "page_hit@1": 0.875,
+        "page_hit@3": 1.0,
+        "page_hit@5": 1.0,
+        "page_hit@10": 1.0,
+        "page_mrr": 0.934,
+        "n": 48
+      },
+      "by_type": {
+        "identifier": {
+          "chunk_hit@1": 0.812,
+          "chunk_hit@3": 0.875,
+          "chunk_hit@5": 1.0,
+          "chunk_hit@10": 1.0,
+          "chunk_mrr": 0.869,
+          "page_hit@1": 0.875,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.927,
+          "n": 16
+        },
+        "howto": {
+          "chunk_hit@1": 0.562,
+          "chunk_hit@3": 0.75,
+          "chunk_hit@5": 0.812,
+          "chunk_hit@10": 1.0,
+          "chunk_mrr": 0.681,
+          "page_hit@1": 0.812,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.906,
+          "n": 16
+        },
+        "concept": {
+          "chunk_hit@1": 0.75,
+          "chunk_hit@3": 0.812,
+          "chunk_hit@5": 0.875,
+          "chunk_hit@10": 0.938,
+          "chunk_mrr": 0.806,
+          "page_hit@1": 0.938,
+          "page_hit@3": 1.0,
+          "page_hit@5": 1.0,
+          "page_hit@10": 1.0,
+          "page_mrr": 0.969,
+          "n": 16
+        }
+      },
+      "comparison": {
+        "cov@5": 0.938,
+        "cov@10": 0.938,
+        "all@5": 0.875,
+        "n": 8
+      }
+    }
+  }
+}
