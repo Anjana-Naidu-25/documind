@@ -1,5 +1,4 @@
 import pytest
-import requests
 
 from src.generation import llm as llm_mod
 from src.generation.prompt import NOT_FOUND, build_messages
@@ -103,3 +102,12 @@ def test_normalize_citations():
 def test_answer_with_fullwidth_citations_gets_sources():
     res = answer("q", retriever=lambda q, k: CHUNKS, llm=_fake_llm("Restarts per policy\u30101\u3011."))
     assert res["answer"] == "Restarts per policy[1]." and [s["n"] for s in res["sources"]] == [1]
+
+
+def test_answer_forwards_rerank_flag_to_hybrid_search(monkeypatch):
+    import src.retrieval.hybrid as hy
+    seen = []
+    monkeypatch.setattr(hy, "hybrid_search", lambda q, n, rerank=False: seen.append((n, rerank)) or CHUNKS)
+    answer("q", k=3, llm=_fake_llm("Ok [1]."), rerank=True)
+    answer("q", k=3, llm=_fake_llm("Ok [1]."))
+    assert seen == [(3, True), (3, False)]

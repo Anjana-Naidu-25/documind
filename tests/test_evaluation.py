@@ -1,4 +1,3 @@
-import json
 
 from src.evaluation import generation_eval as ge
 from src.evaluation import make_testset as mt

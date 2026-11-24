@@ -81,17 +81,20 @@ def _split_oversized(block: str, limit: int, count: Callable[[str], int]) -> lis
     for line in block.splitlines():
         if count(line) > limit:                       # a single enormous line
             if cur:
-                pieces.append("\n".join(cur)); cur = []
+                pieces.append("\n".join(cur))
+                cur = []
             words, w_cur = line.split(" "), []
             for w in words:
                 if w_cur and count(" ".join(w_cur + [w])) > limit:
-                    pieces.append(" ".join(w_cur)); w_cur = []
+                    pieces.append(" ".join(w_cur))
+                    w_cur = []
                 w_cur.append(w)
             if w_cur:
                 pieces.append(" ".join(w_cur))
             continue
         if cur and count("\n".join(cur + [line])) > limit:
-            pieces.append("\n".join(cur)); cur = []
+            pieces.append("\n".join(cur))
+            cur = []
         cur.append(line)
     if cur:
         pieces.append("\n".join(cur))

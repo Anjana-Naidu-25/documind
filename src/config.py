@@ -31,6 +31,8 @@ LLM_MODEL = os.getenv("LLM_MODEL") or os.getenv("GROQ_MODEL", "openai/gpt-oss-12
 JUDGE_MODEL = os.getenv("JUDGE_MODEL") or os.getenv("GROQ_JUDGE_MODEL", "openai/gpt-oss-20b")
 LLM_REASONING_EFFORT = os.getenv("LLM_REASONING_EFFORT", "low")   # only sent to gpt-oss models
 TOP_K = int(os.getenv("TOP_K", "5"))
+# Cross-encoder reranking of the fused candidates: better ranking, but a few extra seconds on CPU.
+USE_RERANK = os.getenv("USE_RERANK", "1") == "1"
 
 # ---- Evaluation / reranking ----
 EVAL_DIR = ROOT / "eval"

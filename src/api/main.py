@@ -12,7 +12,7 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, field_validator
 
-from src.config import CHUNKS_PATH, COLLECTION, LLM_MODEL, QDRANT_URL, TOP_K
+from src.config import CHUNKS_PATH, COLLECTION, LLM_MODEL, QDRANT_URL, TOP_K, USE_RERANK
 from src.generation.llm import LLMError
 from src.generation.rag import answer as rag_answer
 from src.generation.rewrite import contextualize
@@ -29,6 +29,9 @@ async def lifespan(app: FastAPI):
         log.info("Warming up (BM25 index, embedding model, Qdrant)...")
         get_index()
         warmup()
+        if USE_RERANK:
+            from src.retrieval.rerank import warmup as rerank_warmup
+            rerank_warmup()
         log.info("Ready.")
     yield
 
@@ -46,6 +49,7 @@ class AskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=1000)
     history: list[Turn] = Field(default_factory=list, max_length=20)
     k: int = Field(default=TOP_K, ge=1, le=10)
+    rerank: bool | None = Field(default=None, description="Use the cross-encoder reranker. Omit to use the server default.")
 
     @field_validator("question")
     @classmethod
@@ -74,6 +78,7 @@ class AskResponse(BaseModel):
     sources: list[Source]
     retrieved: list[Passage]
     rewritten_question: str | None = None
+    reranked: bool = False
     timings: dict[str, float]
     usage: dict
 
@@ -93,13 +98,14 @@ def health():
     except Exception as e:
         log.exception("health check failed")
         raise HTTPException(status_code=503, detail=f"Search backend unavailable: {type(e).__name__}")
-    return {"status": "ok", "llm_model": LLM_MODEL, **info}
+    return {"status": "ok", "llm_model": LLM_MODEL, "rerank_default": USE_RERANK, **info}
 
 
 @app.post("/ask", response_model=AskResponse)
 def ask(req: AskRequest):
     t_start = time.time()
     standalone, rewrite_s = req.question, 0.0
+    use_rerank = USE_RERANK if req.rerank is None else req.rerank
 
     if req.history:
         t = time.time()
@@ -110,7 +116,7 @@ def ask(req: AskRequest):
         rewrite_s = time.time() - t
 
     try:
-        res = rag_answer(standalone, k=req.k)
+        res = rag_answer(standalone, k=req.k, rerank=use_rerank)
     except LLMError as e:
         log.error("LLM error: %s", e)
         raise HTTPException(status_code=502, detail=f"The language model call failed: {e}")
@@ -134,6 +140,7 @@ def ask(req: AskRequest):
             for i, c in enumerate(res["retrieved"], 1)
         ],
         rewritten_question=standalone if standalone != req.question else None,
+        reranked=use_rerank,
         timings={"rewrite_s": round(rewrite_s, 2), "retrieval_s": res["retrieval_seconds"],
                  "generation_s": llm["seconds"], "total_s": round(total, 2)},
         usage={"model": llm["model"], "prompt_tokens": llm["prompt_tokens"],

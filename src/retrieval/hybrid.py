@@ -20,7 +20,7 @@ def rrf(rankings: list[list[str]], k: int = RRF_K) -> list[tuple[str, float]]:
 
 
 def _dense_ids(query: str, n: int) -> list[str]:
-    from src.retrieval.dense import search as dense_search   # imported lazily: loads the embedding model
+    from src.retrieval.dense import search as dense_search  # imported lazily: loads the embedding model
     return [str(p.id) for p in dense_search(query, n)]
 
 

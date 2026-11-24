@@ -1,0 +1,55 @@
+# docker compose up -d --build        start Qdrant, API (:8000) and UI (:8501)
+# docker compose run --rm ingest      (re)build the index: embeds only new or changed chunks
+x-app: &app
+  build: .
+  image: documind:latest
+  env_file: .env                       # GROQ_API_KEY etc. (never baked into the image)
+  environment:
+    QDRANT_URL: http://qdrant:6333
+    USE_RERANK: ${USE_RERANK:-1}
+  volumes:
+    - hf_cache:/models                 # downloaded models survive rebuilds
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports: ["6333:6333"]
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+    restart: unless-stopped
+
+  api:
+    <<: *app
+    ports: ["8000:8000"]
+    volumes:
+      - hf_cache:/models
+      - ./data/processed:/app/data/processed:ro     # chunks.jsonl feeds the BM25 index
+    depends_on: [qdrant]
+    restart: unless-stopped            # retries until Qdrant is ready
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s               # loading the models takes a while
+
+  ui:
+    <<: *app
+    command: ["streamlit", "run", "ui/app.py", "--server.address", "0.0.0.0", "--server.port", "8501", "--server.headless", "true"]
+    environment:
+      DOCUMIND_API: http://api:8000
+    ports: ["8501:8501"]
+    depends_on: [api]
+    restart: unless-stopped
+
+  ingest:
+    <<: *app
+    profiles: ["ingest"]               # only runs when asked: docker compose run --rm ingest
+    command: ["python", "-m", "src.ingestion.run"]
+    volumes:
+      - hf_cache:/models
+      - ./data:/app/data               # reads data/raw, writes data/processed
+    depends_on: [qdrant]
+
+volumes:
+  hf_cache:

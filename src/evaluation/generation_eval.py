@@ -80,6 +80,23 @@ def run_one(row: dict, answer_fn, judge_llm) -> dict:
     return rec
 
 
+def stats(rows: list[dict]) -> dict:
+    """Raw counts behind the summary, so reports can show 14/15 and not just 93%."""
+    answerable = [r for r in rows if "correct_refusal" not in r]
+    answered = [r for r in answerable if not r["false_refusal"]]
+    judged = [r for r in answered if r["faithful"] is not None]
+    oos = [r for r in rows if "correct_refusal" in r]
+    return {
+        "n_answerable": len(answerable), "n_judged": len(judged), "n_oos": len(oos),
+        "n_correct": sum(r["verdict"] == "correct" for r in answerable),
+        "n_partial": sum(r["verdict"] == "partial" for r in answerable),
+        "n_faithful": sum(r["faithful"] is True for r in judged),
+        "n_false_refusal": sum(bool(r["false_refusal"]) for r in answerable),
+        "n_correct_refusal": sum(bool(r["correct_refusal"]) for r in oos),
+        "mean_seconds": mean([r["seconds"] for r in rows]), "mean_tokens": mean([r["tokens"] for r in rows]),
+    }
+
+
 def summarize(rows: list[dict]) -> str:
     answerable = [r for r in rows if "correct_refusal" not in r]
     answered = [r for r in answerable if not r["false_refusal"]]

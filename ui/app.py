@@ -27,6 +27,7 @@ with st.sidebar:
     k = st.slider("Passages to retrieve", 1, 10, 5)
     show_passages = st.toggle("Show retrieved passages", value=False)
 
+    info: dict = {}
     try:
         h = requests.get(f"{api_url}/health", timeout=3)
         if h.status_code == 200:
@@ -36,6 +37,10 @@ with st.sidebar:
             st.error(h.json().get("detail", "API unhealthy"))
     except requests.RequestException:
         st.error("API not reachable. Start it with: uvicorn src.api.main:app --port 8000")
+
+    if "rerank" not in st.session_state:
+        st.session_state.rerank = info.get("rerank_default", True)
+    st.toggle("Rerank results (slower, more precise)", key="rerank")
 
     if st.button("Clear conversation"):
         st.session_state.messages = []
@@ -62,7 +67,8 @@ def render_meta(meta: dict) -> None:
                 st.code(p["text"][:1000], language="markdown")
     t, u = meta.get("timings", {}), meta.get("usage", {})
     if t:
-        st.caption(f"{u.get('model', '')} · retrieval {t['retrieval_s']}s · generation {t['generation_s']}s · "
+        mode = "hybrid + rerank" if meta.get("reranked") else "hybrid"
+        st.caption(f"{u.get('model', '')} · {mode} · retrieval {t['retrieval_s']}s · generation {t['generation_s']}s · "
                    f"{u.get('prompt_tokens')}+{u.get('completion_tokens')} tokens")
 
 
@@ -83,7 +89,7 @@ if prompt:
     with st.chat_message("assistant"):
         with st.spinner("Searching the docs..."):
             try:
-                r = requests.post(f"{api_url}/ask", json={"question": prompt, "history": history, "k": k}, timeout=120)
+                r = requests.post(f"{api_url}/ask", json={"question": prompt, "history": history, "k": k, "rerank": st.session_state.rerank}, timeout=120)
             except requests.RequestException:
                 r = None
         if r is None:

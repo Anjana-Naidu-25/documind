@@ -1,0 +1,8 @@
+line-length = 120
+
+[lint]
+# Errors, pyflakes (unused imports/variables) and import sorting. Explicit, so CI does not
+# depend on which ruff version is installed.
+select = ["E4", "E7", "E9", "F", "I"]
+# Assigning a lambda to a name is fine for the tiny test helpers and callbacks used here.
+ignore = ["E731"]

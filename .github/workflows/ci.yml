@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # The tests need no GPU/torch or Qdrant: heavy modules are imported lazily and stubbed in tests.
+      - name: Install test dependencies
+        run: pip install pytest ruff fastapi httpx pydantic rank-bm25 requests python-dotenv
+      - name: Lint
+        run: ruff check src tests ui
+      - name: Test
+        run: python -m pytest -q

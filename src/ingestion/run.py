@@ -14,8 +14,15 @@ from qdrant_client.models import Distance, PointIdsList, PointStruct, VectorPara
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer
 
-from src.config import (CHUNK_MAX_TOKENS, CHUNK_OVERLAP_TOKENS, CHUNKS_PATH,
-                        COLLECTION, EMBED_DIM, EMBED_MODEL, QDRANT_URL)
+from src.config import (
+    CHUNK_MAX_TOKENS,
+    CHUNK_OVERLAP_TOKENS,
+    CHUNKS_PATH,
+    COLLECTION,
+    EMBED_DIM,
+    EMBED_MODEL,
+    QDRANT_URL,
+)
 from src.ingestion.chunker import chunk_page
 from src.ingestion.cleaner import clean_markdown
 from src.ingestion.loader import load_docs

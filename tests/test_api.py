@@ -32,7 +32,7 @@ def test_health_unavailable(monkeypatch):
 
 
 def test_ask_success_shape(monkeypatch):
-    monkeypatch.setattr(api, "rag_answer", lambda q, k: fake_result())
+    monkeypatch.setattr(api, "rag_answer", lambda q, k, **kw: fake_result())
     body = client.post("/ask", json={"question": "  how to roll back?  "}).json()
     assert body["found"] and body["sources"][0]["n"] == 1
     assert body["retrieved"][0]["n"] == 1 and len(body["retrieved"][0]["text"]) == 1500   # truncated
@@ -41,7 +41,7 @@ def test_ask_success_shape(monkeypatch):
 
 def test_ask_passes_question_and_k(monkeypatch):
     seen = {}
-    monkeypatch.setattr(api, "rag_answer", lambda q, k: seen.update(q=q, k=k) or fake_result())
+    monkeypatch.setattr(api, "rag_answer", lambda q, k, **kw: seen.update(q=q, k=k) or fake_result())
     client.post("/ask", json={"question": "  hello  ", "k": 3})
     assert seen == {"q": "hello", "k": 3}
 
@@ -49,7 +49,7 @@ def test_ask_passes_question_and_k(monkeypatch):
 def test_follow_up_uses_rewritten_question(monkeypatch):
     seen = {}
     monkeypatch.setattr(api, "contextualize", lambda q, h: "How do I check Deployment rollout history?")
-    monkeypatch.setattr(api, "rag_answer", lambda q, k: seen.update(q=q) or fake_result())
+    monkeypatch.setattr(api, "rag_answer", lambda q, k, **kw: seen.update(q=q) or fake_result())
     body = client.post("/ask", json={"question": "and its history?", "history": [
         {"role": "user", "content": "roll back a deployment"}, {"role": "assistant", "content": "ok"}]}).json()
     assert seen["q"] == "How do I check Deployment rollout history?"
@@ -61,7 +61,7 @@ def test_rewrite_failure_falls_back_to_original(monkeypatch):
         raise LLMError("rate limited")
     seen = {}
     monkeypatch.setattr(api, "contextualize", boom)
-    monkeypatch.setattr(api, "rag_answer", lambda q, k: seen.update(q=q) or fake_result())
+    monkeypatch.setattr(api, "rag_answer", lambda q, k, **kw: seen.update(q=q) or fake_result())
     r = client.post("/ask", json={"question": "and its history?", "history": [{"role": "user", "content": "x"}]})
     assert r.status_code == 200 and seen["q"] == "and its history?" and r.json()["rewritten_question"] is None
 
@@ -75,7 +75,7 @@ def test_validation_errors(payload):
 
 
 def test_llm_error_maps_to_502(monkeypatch):
-    def boom(q, k):
+    def boom(q, k, **kw):
         raise LLMError("HTTP 401: bad key")
     monkeypatch.setattr(api, "rag_answer", boom)
     r = client.post("/ask", json={"question": "hi"})
@@ -83,8 +83,26 @@ def test_llm_error_maps_to_502(monkeypatch):
 
 
 def test_retrieval_error_maps_to_503_without_leaking_details(monkeypatch):
-    def boom(q, k):
+    def boom(q, k, **kw):
         raise ConnectionError("secret-host:6333 refused")
     monkeypatch.setattr(api, "rag_answer", boom)
     r = client.post("/ask", json={"question": "hi"})
     assert r.status_code == 503 and "secret-host" not in r.text
+
+
+def test_rerank_defaults_to_server_setting_and_can_be_overridden(monkeypatch):
+    seen = []
+    monkeypatch.setattr(api, "rag_answer", lambda q, k, rerank: seen.append(rerank) or fake_result())
+    monkeypatch.setattr(api, "USE_RERANK", True)
+    assert client.post("/ask", json={"question": "hi"}).json()["reranked"] is True
+    assert client.post("/ask", json={"question": "hi", "rerank": False}).json()["reranked"] is False
+    monkeypatch.setattr(api, "USE_RERANK", False)
+    assert client.post("/ask", json={"question": "hi"}).json()["reranked"] is False
+    assert client.post("/ask", json={"question": "hi", "rerank": True}).json()["reranked"] is True
+    assert seen == [True, False, False, True]
+
+
+def test_health_reports_rerank_default(monkeypatch):
+    monkeypatch.setattr(api, "_probe", lambda: {"vectors": 1, "chunks": 1})
+    monkeypatch.setattr(api, "USE_RERANK", False)
+    assert client.get("/health").json()["rerank_default"] is False

@@ -32,3 +32,8 @@ def rerank(query: str, records: list[dict], top_k: int = 10,
         rec["rerank_score"] = scores[i]
         out.append(rec)
     return out
+
+
+def warmup() -> None:
+    """Load the model once at startup so the first request isn't slow."""
+    _predict([("warmup", "warmup")])

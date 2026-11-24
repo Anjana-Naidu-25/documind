@@ -11,7 +11,6 @@ from typing import Callable
 from src.config import TOP_K
 from src.generation.prompt import NOT_FOUND, build_messages
 
-
 # Models sometimes write citations as 【1】 or [1, 2] instead of [1].
 _CITE = re.compile(r"[\[\u3010]\s*(\d+(?:\s*[,;]\s*\d+)*)\s*[\]\u3011]")
 _CODE_FENCE = re.compile(r"```.*?```", re.DOTALL)
@@ -44,9 +43,11 @@ def answer(
     k: int = TOP_K,
     retriever: Callable | None = None,
     llm: Callable | None = None,
+    rerank: bool = False,
 ) -> dict:
     if retriever is None:
-        from src.retrieval.hybrid import hybrid_search as retriever
+        from src.retrieval.hybrid import hybrid_search
+        retriever = lambda q, n: hybrid_search(q, n, rerank=rerank)
     if llm is None:
         from src.generation.llm import chat as llm
 
