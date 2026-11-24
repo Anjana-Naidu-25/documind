@@ -7,6 +7,28 @@ that **cites the documentation pages it used**, or an explicit "I couldn't find 
 when the docs don't cover it. Built end to end: ingestion, hybrid retrieval, reranking, grounded generation,
 an API, a chat UI, Docker packaging, and a measured evaluation.
 
+![DocuMind answering a question with cited sources, then refusing an out-of-scope one](docs/screenshot.png)
+
+**Why it exists.** Searching hundreds of documentation pages is slow, and a plain chatbot answers from memory and
+can invent flags or fields. DocuMind retrieves the relevant passages first and lets the model answer *only* from
+them, so every claim can be checked against its source. The same pipeline works for any document collection
+(internal wikis, product manuals, API docs); Kubernetes is the demo corpus.
+
+| | |
+|---|---|
+| Retrieval | `BAAI/bge-small-en-v1.5` embeddings in Qdrant, BM25, Reciprocal Rank Fusion, `ms-marco-MiniLM` cross-encoder |
+| Generation | Groq (`gpt-oss-120b`), any OpenAI-compatible API works; numbered citations; refusal when the docs don't cover it |
+| Serving | FastAPI, Streamlit, Docker Compose, GitHub Actions (ruff + pytest) |
+| Evaluation | 55 retrieval questions, 20-question LLM-judged answer test, results regenerated from files |
+
+## Example
+
+> **Q:** How do I install Docker on Windows?
+> **A:** I couldn't find this in the documentation.
+
+> **Q:** What is the difference between a Deployment and a StatefulSet?
+> **A:** A Deployment manages interchangeable, stateless Pods... A StatefulSet manages Pods that need a stable, unique identity and persistent storage... *(with numbered citations and linked sources)*
+
 ## What it does
 
 - **Ingestion**: cleans Hugo shortcodes out of ~400 Kubernetes docs pages, splits them by heading into ~5,200
@@ -21,7 +43,7 @@ an API, a chat UI, Docker packaging, and a measured evaluation.
 - **Follow-up questions**: a short LLM call rewrites "and how do I undo it?" into a standalone question first.
 - **Service + UI**: FastAPI (`/ask`, `/health`, interactive docs at `/docs`) and a Streamlit chat page that can
   show the retrieved passages and their retriever ranks.
-- **Evaluation**: a 55+ question test set, retrieval metrics (Hit@k, MRR) at chunk and page level, and an
+- **Evaluation**: a 55-question retrieval test set, retrieval metrics (Hit@k, MRR) at chunk and page level, and an
   LLM-judged check of answer correctness, faithfulness and refusals.
 
 ## Architecture
