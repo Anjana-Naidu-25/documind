@@ -35,7 +35,7 @@ def make_results(tmp_path):
                                "page_hit@5": 0.95, "page_mrr": 0.8}, "by_type": {}, "comparison": {"n": 8, "all@5": 0.25}}
                for m in ("dense", "hybrid + rerank")}
     (tmp_path / "retrieval-final.json").write_text(json.dumps({"summary": summary}))
-    for tag in ("baseline", "rerank"):
+    for tag in ("baseline-now", "rerank-now"):
         (tmp_path / f"generation-{tag}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in ROWS))
 
 
@@ -48,7 +48,7 @@ def test_report_contains_counts_and_all_methods(tmp_path):
 
 
 def test_report_skips_missing_files(tmp_path):
-    (tmp_path / "generation-baseline.jsonl").write_text("".join(json.dumps(r) + "\n" for r in ROWS))
+    (tmp_path / "generation-baseline-now.jsonl").write_text("".join(json.dumps(r) + "\n" for r in ROWS))
     text = mr.build_report(tmp_path)
     assert "Answer quality" in text and "Retrieval" not in text and "hybrid + rerank" not in text
     with pytest.raises(SystemExit):

@@ -111,3 +111,10 @@ def test_answer_forwards_rerank_flag_to_hybrid_search(monkeypatch):
     answer("q", k=3, llm=_fake_llm("Ok [1]."), rerank=True)
     answer("q", k=3, llm=_fake_llm("Ok [1]."))
     assert seen == [(3, True), (3, False)]
+
+
+def test_prompt_v2_is_stricter_and_default_is_v1():
+    from src.generation import prompt
+    assert prompt.PROMPTS["v2"].startswith(prompt.PROMPTS["v1"])
+    assert "not stated" in prompt.PROMPTS["v2"] or "not in the passages" in prompt.PROMPTS["v2"]
+    assert prompt.system_prompt() == prompt.PROMPTS["v1"]  # PROMPT_VERSION defaults to v1

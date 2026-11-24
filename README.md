@@ -68,8 +68,9 @@ Numbers below are generated from the files in `eval/results/` by `python -m src.
 
 | Pipeline | Correct | Correct or partial | Faithful | False refusals | Out-of-scope refused | Mean latency | Tokens/answer |
 |---|---|---|---|---|---|---|---|
-| hybrid (RRF) | 14/15 (93%) | 15/15 (100%) | 13/15 (87%) | 0/15 (0%) | 3/3 (100%) | 6.0s | 1630 |
-| hybrid + rerank | 14/15 (93%) | 15/15 (100%) | 14/15 (93%) | 0/15 (0%) | 3/3 (100%) | 6.7s | 1638 |
+| hybrid (RRF) | 16/16 (100%) | 16/16 (100%) | 16/16 (100%) | 0/16 (0%) | 4/4 (100%) | 5.6s | 1606 |
+| hybrid + rerank | 15/16 (94%) | 16/16 (100%) | 15/16 (94%) | 0/16 (0%) | 4/4 (100%) | 7.2s | 1592 |
+| hybrid + rerank, prompt v2 | 15/16 (94%) | 16/16 (100%) | 15/16 (94%) | 0/16 (0%) | 4/4 (100%) | 7.8s | 1685 |
 <!-- RESULTS:END -->
 
 **How to read these numbers**
@@ -77,7 +78,7 @@ Numbers below are generated from the files in `eval/results/` by `python -m src.
 - The test set was drafted by an LLM from real chunks (questions were told to paraphrase, not copy), then
   reviewed by hand; the comparison and out-of-scope questions are hand-written. Two questions found to be
   mislabeled after reading failures were removed from both runs.
-- Retrieval uses ~55 questions and answer quality only ~18, so one question moves a percentage by several points.
+- Retrieval uses 55 questions and answer quality only 16 answerable ones (plus 4 out-of-scope), so one question moves a percentage by several points.
   Small differences are noise.
 - The answer judge is an LLM (a smaller model than the one answering). Treat the scores as a consistent
   yardstick for comparing versions, not as ground truth.
@@ -90,7 +91,11 @@ Numbers below are generated from the files in `eval/results/` by `python -m src.
   two-page questions) for a few extra seconds of CPU time per question. That gain did not visibly change answer
   quality at this sample size, because the generator reads five passages either way.
 - The main answer-quality weakness is **unfaithfulness**: occasionally the model adds true-sounding details that
-  are not in the retrieved passages. The prompt forbids it, but a prompt alone does not fully stop it.
+  are not in the retrieved passages. The prompt forbids it, but a prompt alone does not fully stop it. I tested a
+  stricter prompt (`PROMPT_VERSION=v2`: check each fact against the cited passage, drop unsupported details) on the
+  same 20 questions: results were identical (15/16 correct, 15/16 faithful, the same single miss) and answers used
+  ~6% more tokens, so v1 stays the default. The remaining miss is a question where the passages only partly cover
+  the topic and the model elaborates; fixing that likely needs an answer-vs-passage verification step, not wording.
 
 ## Quickstart (Docker)
 
@@ -129,8 +134,9 @@ Evaluation:
 ```bash
 python -m src.evaluation.make_testset                 # draft questions with the LLM, then review the file by hand
 python -m src.evaluation.retrieval_eval --rerank --tag final     # free: no LLM calls
-python -m src.evaluation.generation_eval --n 20 --tag baseline   # uses API tokens; resumable
-python -m src.evaluation.generation_eval --n 20 --tag rerank --rerank
+python -m src.evaluation.generation_eval --n 20 --tag baseline-now   # uses API tokens; resumable
+python -m src.evaluation.generation_eval --n 20 --tag rerank-now --rerank
+PROMPT_VERSION=v2 python -m src.evaluation.generation_eval --n 20 --tag rerank-v2 --rerank
 python -m src.evaluation.make_report                  # refresh the tables above
 ```
 

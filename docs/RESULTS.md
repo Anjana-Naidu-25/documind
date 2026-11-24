@@ -15,5 +15,6 @@ Generated from `eval/results/` by `python -m src.evaluation.make_report`.
 
 | Pipeline | Correct | Correct or partial | Faithful | False refusals | Out-of-scope refused | Mean latency | Tokens/answer |
 |---|---|---|---|---|---|---|---|
-| hybrid (RRF) | 14/15 (93%) | 15/15 (100%) | 13/15 (87%) | 0/15 (0%) | 3/3 (100%) | 6.0s | 1630 |
-| hybrid + rerank | 14/15 (93%) | 15/15 (100%) | 14/15 (93%) | 0/15 (0%) | 3/3 (100%) | 6.7s | 1638 |
+| hybrid (RRF) | 16/16 (100%) | 16/16 (100%) | 16/16 (100%) | 0/16 (0%) | 4/4 (100%) | 5.6s | 1606 |
+| hybrid + rerank | 15/16 (94%) | 16/16 (100%) | 15/16 (94%) | 0/16 (0%) | 4/4 (100%) | 7.2s | 1592 |
+| hybrid + rerank, prompt v2 | 15/16 (94%) | 16/16 (100%) | 15/16 (94%) | 0/16 (0%) | 4/4 (100%) | 7.8s | 1685 |

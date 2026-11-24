@@ -12,7 +12,8 @@ from src.config import RESULTS_DIR, ROOT
 from src.evaluation.generation_eval import load_rows, stats
 
 RETRIEVAL_FILE = "retrieval-final.json"
-GENERATION_RUNS = [("hybrid (RRF)", "baseline"), ("hybrid + rerank", "rerank")]
+# All three runs use the same 20 questions (same seed), so they are directly comparable. Missing files are skipped.
+GENERATION_RUNS = [("hybrid (RRF)", "baseline-now"), ("hybrid + rerank", "rerank-now"), ("hybrid + rerank, prompt v2", "rerank-v2")]
 START, END = "<!-- RESULTS:START -->", "<!-- RESULTS:END -->"
 
 
